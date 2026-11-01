@@ -1,0 +1,34 @@
+{
+  "deviceBoard": "ESP32 Generic",
+  "communicationPort": "COM6",
+  "runtimeIpAddress": "",
+  "vendorScreenData": {
+    "serial": {
+      "baud_rate": "115200",
+      "enable_rs485_en_pin": false
+    },
+    "network": {
+      "enabled": false
+    }
+  },
+  "vendorScreenDataByBoard": {
+    "OpenPLC Simulator": {},
+    "ESP32 Generic": {
+      "serial": {
+        "baud_rate": "115200",
+        "enable_rs485_en_pin": false
+      },
+      "network": {
+        "enabled": false
+      }
+    }
+  },
+  "selectedPlatformOptions": {},
+  "vppPackagePinsByBoard": {
+    "ESP32 Generic": {
+      "packageId": "com.openplc.espressif",
+      "version": "2.2.0",
+      "contentHash": "sha256:82a4ed367c52039ba571882c0b191236b7ee0b4fedbf72e3532f2a7b2f391250"
+    }
+  }
+}

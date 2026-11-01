@@ -1,0 +1,63 @@
+FUNCTION_BLOCK MeineSteuerung
+  VAR
+    ESP32_LM9 : ESP32_LM75;
+    ESP32_DISPLAY6 : ESP32_DISPLAY;
+    ESP32_PWM4 : ESP32_PWM;
+    ESP32_TONE0 : ESP32_TONE;
+    NOTE_D0 : dint;
+    ESP32_TONE1 : ESP32_TONE;
+  END_VAR
+  VAR_OUTPUT
+    xOUT1 : BOOL; (* LED0 *)
+    xOUT2 : BOOL; (* LED1 *)
+    xOUT3 : BOOL; (* LED2 *)
+    xOUT4 : BOOL; (* LED3 *)
+    xOUT5 : BOOL; (* LED4 *)
+    xOUT6 : BOOL; (* LED5 *)
+    xOUT7 : BOOL; (* LED6 *)
+    xOUT8 : BOOL; (* LED7 *)
+    iDAC1 : USINT; (* DAC1 *)
+    iDAC2 : USINT; (* DAC2 *)
+  END_VAR
+  VAR_INPUT
+    xIN1 : BOOL; (* S1 *)
+    xIN2 : BOOL; (* S2 *)
+    xIN3 : BOOL; (* S3 *)
+    xIN4 : BOOL; (* S4 *)
+    iADC0 : UINT;
+    iADC1 : UINT;
+    iADC2 : UINT;
+    iADC3 : UINT; (* A3: Poti oder LDR *)
+  END_VAR
+  VAR_GLOBAL CONSTANT
+END_VAR
+
+  VAR_EXTERNAL
+    NOTE_C : INT;
+    NOTE_Cs : INT;
+    NOTE_D : INT;
+    NOTE_Eb : INT;
+    NOTE_E : INT;
+    NOTE_F : INT;
+    NOTE_Fs : INT;
+    NOTE_G : INT;
+    NOTE_Gs : INT;
+    NOTE_A : INT;
+    NOTE_Bb : INT;
+    NOTE_B : INT;
+  END_VAR
+  VAR_INPUT CONSTANT
+  END_VAR
+  VAR_EXTERNAL CONSTANT
+  END_VAR
+
+{
+  "name": "MeineSteuerung",
+  "rung": {
+    "comment": "",
+    "edges": [],
+    "nodes": [],
+    "selectedNodes": []
+  }
+}
+END_FUNCTION_BLOCK

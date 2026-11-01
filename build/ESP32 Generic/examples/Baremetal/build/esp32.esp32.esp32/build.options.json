@@ -1,0 +1,10 @@
+{
+  "additionalFiles": "..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..\\..,..\\..\\..,..\\..\\..,..\\..\\..,..\\..\\..,..\\..\\..,..\\..\\..,..\\..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..",
+  "builtInLibrariesFolders": "C:\\Users\\rah\\OneDrive - Friedrich Ebert Schule\\Dokumente\\Arduino\\libraries",
+  "compiler.optimization_flags": "-Os",
+  "customBuildProperties": "compiler.c.extra_flags=-MMD -c -Wno-incompatible-pointer-types",
+  "fqbn": "esp32:esp32:esp32:UploadSpeed=230400",
+  "hardwareFolders": "C:\\Users\\rah\\AppData\\Roaming\\open-plc-editor\\arduino\\data\\packages\\esp32\\hardware\\esp32\\3.3.10,C:\\Users\\rah\\AppData\\Roaming\\open-plc-editor\\arduino\\data\\packages\\esp32\\hardware\\esp32\\3.3.10",
+  "otherLibrariesFolders": "C:\\Users\\rah\\AppData\\Roaming\\open-plc-editor\\arduino\\user\\libraries",
+  "sketchLocation": "C:\\Users\\rah\\OneDrive - Friedrich Ebert Schule\\Dokumente\\OpenPLC-Projekte\\TG_Mechatronik\\ESP32-openPLC-Template\\build\\ESP32 Generic\\examples\\Baremetal"
+}

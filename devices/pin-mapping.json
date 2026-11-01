@@ -1,0 +1,100 @@
+{
+  "ESP32 Generic": [
+    {
+      "pin": "5",
+      "pinType": "digitalInput",
+      "address": "%IX0.0",
+      "alias": "S1"
+    },
+    {
+      "pin": "23",
+      "pinType": "digitalInput",
+      "address": "%IX0.1",
+      "alias": "S2"
+    },
+    {
+      "pin": "19",
+      "pinType": "digitalInput",
+      "address": "%IX0.2",
+      "alias": "S3"
+    },
+    {
+      "pin": "18",
+      "pinType": "digitalInput",
+      "address": "%IX0.3",
+      "alias": "S4"
+    },
+    {
+      "pin": "9",
+      "pinType": "digitalOutput",
+      "address": "%QX0.0",
+      "alias": "LED1"
+    },
+    {
+      "pin": "10",
+      "pinType": "digitalOutput",
+      "address": "%QX0.1",
+      "alias": "LED2"
+    },
+    {
+      "pin": "14",
+      "pinType": "digitalOutput",
+      "address": "%QX0.2",
+      "alias": "LED3"
+    },
+    {
+      "pin": "4",
+      "pinType": "digitalOutput",
+      "address": "%QX0.3",
+      "alias": "LED4"
+    },
+    {
+      "pin": "33",
+      "pinType": "digitalOutput",
+      "address": "%QX0.4",
+      "alias": "LED5"
+    },
+    {
+      "pin": "15",
+      "pinType": "digitalOutput",
+      "address": "%QX0.5",
+      "alias": "LED6"
+    },
+    {
+      "pin": "13",
+      "pinType": "digitalOutput",
+      "address": "%QX0.6",
+      "alias": "LED7"
+    },
+    {
+      "pin": "32",
+      "pinType": "digitalOutput",
+      "address": "%QX0.7",
+      "alias": "LED8"
+    },
+    {
+      "pin": "34",
+      "pinType": "analogInput",
+      "address": "%IW0",
+      "alias": "A3"
+    },
+    {
+      "pin": "35",
+      "pinType": "analogInput",
+      "address": "%IW1",
+      "alias": "A2"
+    },
+    {
+      "pin": "37",
+      "pinType": "analogInput",
+      "address": "%IW2",
+      "alias": "A1"
+    },
+    {
+      "pin": "38",
+      "pinType": "analogInput",
+      "address": "%IW3",
+      "alias": "A0"
+    }
+  ]
+}

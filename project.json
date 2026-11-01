@@ -1,0 +1,407 @@
+{
+  "meta": {
+    "name": "ESP32-openPLC-Template",
+    "type": "plc-project"
+  },
+  "data": {
+    "dataTypes": [],
+    "globalVariableLists": [],
+    "pous": [],
+    "configuration": {
+      "resource": {
+        "tasks": [
+          {
+            "name": "task0",
+            "triggering": "Cyclic",
+            "interval": "T#20ms",
+            "priority": 1
+          }
+        ],
+        "instances": [
+          {
+            "name": "instance0",
+            "task": "task0",
+            "program": "main"
+          }
+        ],
+        "globalVariables": [
+          {
+            "name": "S1",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "%IX0.0",
+            "initialValue": null,
+            "documentation": "",
+            "debug": false
+          },
+          {
+            "name": "S2",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "%IX0.1",
+            "initialValue": null,
+            "documentation": "",
+            "debug": false
+          },
+          {
+            "name": "S3",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "%IX0.2",
+            "initialValue": null,
+            "documentation": "",
+            "debug": false
+          },
+          {
+            "name": "S4",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "%IX0.3",
+            "initialValue": null,
+            "documentation": "",
+            "debug": false
+          },
+          {
+            "name": "LED1",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "%QX0.0",
+            "initialValue": "1",
+            "documentation": "",
+            "debug": false
+          },
+          {
+            "name": "LED2",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "%QX0.1",
+            "initialValue": "1",
+            "documentation": "",
+            "debug": true
+          },
+          {
+            "name": "LED3",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "%QX0.2",
+            "initialValue": "1",
+            "documentation": "",
+            "debug": false
+          },
+          {
+            "name": "LED4",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "%QX0.3",
+            "initialValue": "1",
+            "documentation": "",
+            "debug": false
+          },
+          {
+            "name": "LED5",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "%QX0.4",
+            "initialValue": "1",
+            "documentation": "",
+            "debug": false
+          },
+          {
+            "name": "LED6",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "%QX0.5",
+            "initialValue": "1",
+            "documentation": "",
+            "debug": false
+          },
+          {
+            "name": "LED7",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "%QX0.6",
+            "initialValue": "1",
+            "documentation": "",
+            "debug": false
+          },
+          {
+            "name": "LED8",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "%QX0.7",
+            "initialValue": "1",
+            "documentation": "",
+            "debug": false
+          },
+          {
+            "name": "A3",
+            "type": {
+              "definition": "base-type",
+              "value": "UINT"
+            },
+            "location": "%IW0",
+            "initialValue": null,
+            "documentation": "",
+            "debug": true
+          },
+          {
+            "name": "A2",
+            "type": {
+              "definition": "base-type",
+              "value": "UINT"
+            },
+            "location": "%IW1",
+            "initialValue": null,
+            "documentation": "",
+            "debug": true
+          },
+          {
+            "name": "A1",
+            "type": {
+              "definition": "base-type",
+              "value": "UINT"
+            },
+            "location": "%IW2",
+            "initialValue": null,
+            "documentation": "",
+            "debug": true
+          },
+          {
+            "name": "A0",
+            "type": {
+              "definition": "base-type",
+              "value": "UINT"
+            },
+            "location": "%IW3",
+            "initialValue": null,
+            "documentation": "",
+            "debug": true
+          },
+          {
+            "name": "DAC1",
+            "type": {
+              "definition": "base-type",
+              "value": "UINT"
+            },
+            "location": "%QW0",
+            "initialValue": null,
+            "documentation": "",
+            "debug": false
+          },
+          {
+            "name": "DAC2",
+            "type": {
+              "definition": "base-type",
+              "value": "UINT"
+            },
+            "location": "%QW1",
+            "initialValue": null,
+            "documentation": "",
+            "debug": false
+          },
+          {
+            "name": "NOTE_C",
+            "type": {
+              "definition": "base-type",
+              "value": "INT"
+            },
+            "location": "",
+            "initialValue": "0",
+            "documentation": "",
+            "debug": false,
+            "flag": "constant"
+          },
+          {
+            "name": "NOTE_Cs",
+            "type": {
+              "definition": "base-type",
+              "value": "INT"
+            },
+            "location": "",
+            "initialValue": "1",
+            "documentation": "",
+            "debug": false,
+            "flag": "constant"
+          },
+          {
+            "name": "NOTE_D",
+            "type": {
+              "definition": "base-type",
+              "value": "INT"
+            },
+            "location": "",
+            "initialValue": "2",
+            "documentation": "",
+            "debug": false,
+            "flag": "constant"
+          },
+          {
+            "name": "NOTE_Eb",
+            "type": {
+              "definition": "base-type",
+              "value": "INT"
+            },
+            "location": "",
+            "initialValue": "3",
+            "documentation": "",
+            "debug": false,
+            "flag": "constant"
+          },
+          {
+            "name": "NOTE_E",
+            "type": {
+              "definition": "base-type",
+              "value": "INT"
+            },
+            "location": "",
+            "initialValue": "4",
+            "documentation": "",
+            "debug": false,
+            "flag": "constant"
+          },
+          {
+            "name": "NOTE_F",
+            "type": {
+              "definition": "base-type",
+              "value": "INT"
+            },
+            "location": "",
+            "initialValue": "5",
+            "documentation": "",
+            "debug": false,
+            "flag": "constant"
+          },
+          {
+            "name": "NOTE_Fs",
+            "type": {
+              "definition": "base-type",
+              "value": "INT"
+            },
+            "location": "",
+            "initialValue": "6",
+            "documentation": "",
+            "debug": false,
+            "flag": "constant"
+          },
+          {
+            "name": "NOTE_G",
+            "type": {
+              "definition": "base-type",
+              "value": "INT"
+            },
+            "location": "",
+            "initialValue": "7",
+            "documentation": "",
+            "debug": false,
+            "flag": "constant"
+          },
+          {
+            "name": "NOTE_Gs",
+            "type": {
+              "definition": "base-type",
+              "value": "INT"
+            },
+            "location": "",
+            "initialValue": "8",
+            "documentation": "",
+            "debug": false,
+            "flag": "constant"
+          },
+          {
+            "name": "NOTE_A",
+            "type": {
+              "definition": "base-type",
+              "value": "INT"
+            },
+            "location": "",
+            "initialValue": "9",
+            "documentation": "",
+            "debug": false,
+            "flag": "constant"
+          },
+          {
+            "name": "NOTE_Bb",
+            "type": {
+              "definition": "base-type",
+              "value": "INT"
+            },
+            "location": "",
+            "initialValue": "10",
+            "documentation": "",
+            "debug": false,
+            "flag": "constant"
+          },
+          {
+            "name": "NOTE_B",
+            "type": {
+              "definition": "base-type",
+              "value": "INT"
+            },
+            "location": "",
+            "initialValue": "11",
+            "documentation": "",
+            "debug": false,
+            "flag": "constant"
+          }
+        ]
+      }
+    },
+    "libraries": [
+      {
+        "name": "ESP32-Carrier-Board-Lib",
+        "version": "0.1.0"
+      }
+    ],
+    "debugVariables": {
+      "global": [
+        "LED2",
+        "A3",
+        "A2",
+        "A1",
+        "A0"
+      ],
+      "pous": {
+        "MeineSteuerung": [
+          "xOUT8",
+          "iDAC1",
+          "xIN4",
+          "iADC0",
+          "iADC1",
+          "iADC2",
+          "iADC3"
+        ],
+        "main": [
+          "LED2",
+          "A3",
+          "A2",
+          "A1",
+          "A0"
+        ]
+      }
+    }
+  }
+}

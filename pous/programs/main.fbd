@@ -1,0 +1,5704 @@
+PROGRAM main
+  VAR
+    MEINESTEUERUNG0 : MeineSteuerung;
+    ESP32_TASTER_SCHALTER1 : ESP32_TASTER_SCHALTER;
+    ESP32_TASTER_SCHALTER2 : ESP32_TASTER_SCHALTER;
+    ESP32_TASTER_SCHALTER3 : ESP32_TASTER_SCHALTER;
+    ESP32_TASTER_SCHALTER4 : ESP32_TASTER_SCHALTER;
+    ESP32_DAC1 : ESP32_DAC;
+  END_VAR
+  VAR_EXTERNAL
+    LED1 : bool;
+    LED2 : bool;
+    LED3 : bool;
+    LED4 : bool;
+    LED5 : bool;
+    LED6 : bool;
+    LED7 : bool;
+    LED8 : bool;
+    S1 : bool;
+    S2 : bool;
+    S3 : bool;
+    S4 : bool;
+    A3 : UINT;
+    A2 : UINT;
+    A1 : UINT;
+    A0 : UINT;
+  END_VAR
+
+{
+  "name": "main",
+  "rung": {
+    "comment": "",
+    "nodes": [
+      {
+        "id": "BLOCK_c209bc95-2633-4a4c-8ae1-324c875425be",
+        "type": "block",
+        "position": {
+          "x": 496,
+          "y": 160
+        },
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": 496,
+                "y": 208
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 48
+              },
+              "id": "xIN1",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 48,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 496,
+                "y": 256
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 96
+              },
+              "id": "xIN2",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 96,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 496,
+                "y": 304
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 144
+              },
+              "id": "xIN3",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 144,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 496,
+                "y": 352
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 192
+              },
+              "id": "xIN4",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 192,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 496,
+                "y": 400
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 240
+              },
+              "id": "iADC0",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 240,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 496,
+                "y": 448
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 288
+              },
+              "id": "iADC1",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 288,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 496,
+                "y": 496
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 336
+              },
+              "id": "iADC2",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 336,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 496,
+                "y": 544
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 384
+              },
+              "id": "iADC3",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 384,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 664,
+                "y": 208
+              },
+              "relPosition": {
+                "x": 168,
+                "y": 48
+              },
+              "id": "xOUT1",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 48,
+                "right": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 664,
+                "y": 256
+              },
+              "relPosition": {
+                "x": 168,
+                "y": 96
+              },
+              "id": "xOUT2",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 96,
+                "right": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 664,
+                "y": 304
+              },
+              "relPosition": {
+                "x": 168,
+                "y": 144
+              },
+              "id": "xOUT3",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 144,
+                "right": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 664,
+                "y": 352
+              },
+              "relPosition": {
+                "x": 168,
+                "y": 192
+              },
+              "id": "xOUT4",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 192,
+                "right": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 664,
+                "y": 400
+              },
+              "relPosition": {
+                "x": 168,
+                "y": 240
+              },
+              "id": "xOUT5",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 240,
+                "right": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 664,
+                "y": 448
+              },
+              "relPosition": {
+                "x": 168,
+                "y": 288
+              },
+              "id": "xOUT6",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 288,
+                "right": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 664,
+                "y": 496
+              },
+              "relPosition": {
+                "x": 168,
+                "y": 336
+              },
+              "id": "xOUT7",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 336,
+                "right": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 664,
+                "y": 544
+              },
+              "relPosition": {
+                "x": 168,
+                "y": 384
+              },
+              "id": "xOUT8",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 384,
+                "right": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 664,
+                "y": 592
+              },
+              "relPosition": {
+                "x": 168,
+                "y": 432
+              },
+              "id": "iDAC1",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 432,
+                "right": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 664,
+                "y": 640
+              },
+              "relPosition": {
+                "x": 168,
+                "y": 480
+              },
+              "id": "iDAC2",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 480,
+                "right": 0
+              }
+            }
+          ],
+          "inputHandles": [
+            {
+              "glbPosition": {
+                "x": 496,
+                "y": 208
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 48
+              },
+              "id": "xIN1",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 48,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 496,
+                "y": 256
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 96
+              },
+              "id": "xIN2",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 96,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 496,
+                "y": 304
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 144
+              },
+              "id": "xIN3",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 144,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 496,
+                "y": 352
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 192
+              },
+              "id": "xIN4",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 192,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 496,
+                "y": 400
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 240
+              },
+              "id": "iADC0",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 240,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 496,
+                "y": 448
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 288
+              },
+              "id": "iADC1",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 288,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 496,
+                "y": 496
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 336
+              },
+              "id": "iADC2",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 336,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 496,
+                "y": 544
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 384
+              },
+              "id": "iADC3",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 384,
+                "left": 0
+              }
+            }
+          ],
+          "outputHandles": [
+            {
+              "glbPosition": {
+                "x": 664,
+                "y": 208
+              },
+              "relPosition": {
+                "x": 168,
+                "y": 48
+              },
+              "id": "xOUT1",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 48,
+                "right": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 664,
+                "y": 256
+              },
+              "relPosition": {
+                "x": 168,
+                "y": 96
+              },
+              "id": "xOUT2",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 96,
+                "right": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 664,
+                "y": 304
+              },
+              "relPosition": {
+                "x": 168,
+                "y": 144
+              },
+              "id": "xOUT3",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 144,
+                "right": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 664,
+                "y": 352
+              },
+              "relPosition": {
+                "x": 168,
+                "y": 192
+              },
+              "id": "xOUT4",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 192,
+                "right": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 664,
+                "y": 400
+              },
+              "relPosition": {
+                "x": 168,
+                "y": 240
+              },
+              "id": "xOUT5",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 240,
+                "right": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 664,
+                "y": 448
+              },
+              "relPosition": {
+                "x": 168,
+                "y": 288
+              },
+              "id": "xOUT6",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 288,
+                "right": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 664,
+                "y": 496
+              },
+              "relPosition": {
+                "x": 168,
+                "y": 336
+              },
+              "id": "xOUT7",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 336,
+                "right": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 664,
+                "y": 544
+              },
+              "relPosition": {
+                "x": 168,
+                "y": 384
+              },
+              "id": "xOUT8",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 384,
+                "right": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 664,
+                "y": 592
+              },
+              "relPosition": {
+                "x": 168,
+                "y": 432
+              },
+              "id": "iDAC1",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 432,
+                "right": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 664,
+                "y": 640
+              },
+              "relPosition": {
+                "x": 168,
+                "y": 480
+              },
+              "id": "iDAC2",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 480,
+                "right": 0
+              }
+            }
+          ],
+          "inputConnector": {
+            "glbPosition": {
+              "x": 496,
+              "y": 208
+            },
+            "relPosition": {
+              "x": 0,
+              "y": 48
+            },
+            "id": "xIN1",
+            "position": "left",
+            "type": "target",
+            "style": {
+              "top": 48,
+              "left": 0
+            }
+          },
+          "outputConnector": {
+            "glbPosition": {
+              "x": 664,
+              "y": 208
+            },
+            "relPosition": {
+              "x": 168,
+              "y": 48
+            },
+            "id": "xOUT1",
+            "position": "right",
+            "type": "source",
+            "style": {
+              "top": 48,
+              "right": 0
+            }
+          },
+          "numericId": "1882590",
+          "variant": {
+            "name": "MeineSteuerung",
+            "type": "function-block",
+            "variables": [
+              {
+                "name": "ESP32_LM9",
+                "class": "local",
+                "type": {
+                  "definition": "user-data-type",
+                  "value": "ESP32_LM75"
+                },
+                "location": "",
+                "initialValue": null,
+                "documentation": "",
+                "debug": false
+              },
+              {
+                "name": "ESP32_DISPLAY6",
+                "class": "local",
+                "type": {
+                  "definition": "user-data-type",
+                  "value": "ESP32_DISPLAY"
+                },
+                "location": "",
+                "initialValue": null,
+                "documentation": "",
+                "debug": false
+              },
+              {
+                "name": "ESP32_PWM4",
+                "class": "local",
+                "type": {
+                  "definition": "user-data-type",
+                  "value": "ESP32_PWM"
+                },
+                "location": "",
+                "initialValue": null,
+                "documentation": "",
+                "debug": false
+              },
+              {
+                "name": "xOUT1",
+                "class": "output",
+                "type": {
+                  "value": "BOOL",
+                  "definition": "base-type"
+                },
+                "location": "",
+                "initialValue": null,
+                "documentation": "LED0",
+                "debug": false
+              },
+              {
+                "name": "xOUT2",
+                "class": "output",
+                "type": {
+                  "value": "BOOL",
+                  "definition": "base-type"
+                },
+                "location": "",
+                "initialValue": null,
+                "documentation": "LED1",
+                "debug": false
+              },
+              {
+                "name": "xOUT3",
+                "class": "output",
+                "type": {
+                  "value": "BOOL",
+                  "definition": "base-type"
+                },
+                "location": "",
+                "initialValue": null,
+                "documentation": "LED2",
+                "debug": false
+              },
+              {
+                "name": "xOUT4",
+                "class": "output",
+                "type": {
+                  "value": "BOOL",
+                  "definition": "base-type"
+                },
+                "location": "",
+                "initialValue": null,
+                "documentation": "LED3",
+                "debug": false
+              },
+              {
+                "name": "xOUT5",
+                "class": "output",
+                "type": {
+                  "value": "BOOL",
+                  "definition": "base-type"
+                },
+                "location": "",
+                "initialValue": null,
+                "documentation": "LED4",
+                "debug": false
+              },
+              {
+                "name": "xOUT6",
+                "class": "output",
+                "type": {
+                  "value": "BOOL",
+                  "definition": "base-type"
+                },
+                "location": "",
+                "initialValue": null,
+                "documentation": "LED5",
+                "debug": false
+              },
+              {
+                "name": "xOUT7",
+                "class": "output",
+                "type": {
+                  "value": "BOOL",
+                  "definition": "base-type"
+                },
+                "location": "",
+                "initialValue": null,
+                "documentation": "LED6",
+                "debug": false
+              },
+              {
+                "name": "xOUT8",
+                "class": "output",
+                "type": {
+                  "value": "BOOL",
+                  "definition": "base-type"
+                },
+                "location": "",
+                "initialValue": null,
+                "documentation": "LED7",
+                "debug": true
+              },
+              {
+                "name": "iDAC1",
+                "class": "output",
+                "type": {
+                  "value": "USINT",
+                  "definition": "base-type"
+                },
+                "location": "",
+                "initialValue": null,
+                "documentation": "DAC1",
+                "debug": true
+              },
+              {
+                "name": "iDAC2",
+                "class": "output",
+                "type": {
+                  "value": "USINT",
+                  "definition": "base-type"
+                },
+                "location": "",
+                "initialValue": null,
+                "documentation": "DAC2",
+                "debug": false
+              },
+              {
+                "name": "xIN1",
+                "class": "input",
+                "type": {
+                  "value": "BOOL",
+                  "definition": "base-type"
+                },
+                "location": "",
+                "initialValue": null,
+                "documentation": "S1",
+                "debug": false
+              },
+              {
+                "name": "xIN2",
+                "class": "input",
+                "type": {
+                  "value": "BOOL",
+                  "definition": "base-type"
+                },
+                "location": "",
+                "initialValue": null,
+                "documentation": "S2",
+                "debug": false
+              },
+              {
+                "name": "xIN3",
+                "class": "input",
+                "type": {
+                  "value": "BOOL",
+                  "definition": "base-type"
+                },
+                "location": "",
+                "initialValue": null,
+                "documentation": "S3",
+                "debug": false
+              },
+              {
+                "name": "xIN4",
+                "class": "input",
+                "type": {
+                  "value": "BOOL",
+                  "definition": "base-type"
+                },
+                "location": "",
+                "initialValue": null,
+                "documentation": "S4",
+                "debug": false
+              },
+              {
+                "name": "iADC0",
+                "class": "input",
+                "type": {
+                  "value": "UINT",
+                  "definition": "base-type"
+                },
+                "location": "",
+                "initialValue": null,
+                "documentation": "",
+                "debug": true
+              },
+              {
+                "name": "iADC1",
+                "class": "input",
+                "type": {
+                  "value": "UINT",
+                  "definition": "base-type"
+                },
+                "location": "",
+                "initialValue": null,
+                "documentation": "",
+                "debug": true
+              },
+              {
+                "name": "iADC2",
+                "class": "input",
+                "type": {
+                  "value": "UINT",
+                  "definition": "base-type"
+                },
+                "location": "",
+                "initialValue": null,
+                "documentation": "",
+                "debug": true
+              },
+              {
+                "name": "iADC3",
+                "class": "input",
+                "type": {
+                  "value": "UINT",
+                  "definition": "base-type"
+                },
+                "location": "",
+                "initialValue": null,
+                "documentation": "A3: Poti oder LDR",
+                "debug": true
+              },
+              {
+                "id": "4e35ea18-5d3b-463f-b5e6-ebc80a8754db",
+                "name": "ESP32_TONE0",
+                "type": {
+                  "definition": "user-data-type",
+                  "value": "ESP32_TONE"
+                },
+                "class": "local",
+                "location": "",
+                "documentation": "",
+                "debug": false
+              }
+            ]
+          },
+          "variable": {
+            "name": "MEINESTEUERUNG0",
+            "class": "local",
+            "type": {
+              "definition": "derived",
+              "value": "MeineSteuerung"
+            },
+            "location": "",
+            "initialValue": null,
+            "documentation": "",
+            "debug": false
+          },
+          "executionOrder": 0,
+          "executionControl": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "width": 168,
+        "height": 504,
+        "measured": {
+          "width": 168,
+          "height": 504
+        },
+        "draggable": true,
+        "selectable": true,
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "INPUT-VARIABLE_60110ff8-f624-45ef-aa6d-94dfe2e77387",
+        "type": "input-variable",
+        "position": {
+          "x": -416,
+          "y": -208
+        },
+        "width": 64,
+        "height": 32,
+        "measured": {
+          "width": 64,
+          "height": 32
+        },
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": 400,
+                "y": 160
+              },
+              "relPosition": {
+                "x": 48,
+                "y": 16
+              },
+              "id": "output-variable",
+              "position": "right",
+              "type": "source"
+            }
+          ],
+          "inputHandles": [],
+          "outputHandles": [
+            {
+              "glbPosition": {
+                "x": 400,
+                "y": 160
+              },
+              "relPosition": {
+                "x": 48,
+                "y": 16
+              },
+              "id": "output-variable",
+              "position": "right",
+              "type": "source"
+            }
+          ],
+          "outputConnector": {
+            "glbPosition": {
+              "x": 400,
+              "y": 160
+            },
+            "relPosition": {
+              "x": 48,
+              "y": 16
+            },
+            "id": "output-variable",
+            "position": "right",
+            "type": "source"
+          },
+          "numericId": "1222011",
+          "variable": {
+            "id": "",
+            "name": "S1",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "class": "local",
+            "location": "",
+            "documentation": "",
+            "debug": false
+          },
+          "executionOrder": 0,
+          "variant": "input-variable",
+          "negated": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "deletable": true,
+        "selectable": true,
+        "draggable": true,
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "OUTPUT-VARIABLE_5efe3dc1-c835-4698-b2c1-5ad9ed97da68",
+        "type": "output-variable",
+        "position": {
+          "x": 992,
+          "y": 112
+        },
+        "width": 64,
+        "height": 32,
+        "measured": {
+          "width": 64,
+          "height": 32
+        },
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": 800,
+                "y": 240
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 16
+              },
+              "id": "input-variable",
+              "position": "left",
+              "type": "target"
+            }
+          ],
+          "inputHandles": [
+            {
+              "glbPosition": {
+                "x": 800,
+                "y": 240
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 16
+              },
+              "id": "input-variable",
+              "position": "left",
+              "type": "target"
+            }
+          ],
+          "outputHandles": [],
+          "inputConnector": {
+            "glbPosition": {
+              "x": 800,
+              "y": 240
+            },
+            "relPosition": {
+              "x": 0,
+              "y": 16
+            },
+            "id": "input-variable",
+            "position": "left",
+            "type": "target"
+          },
+          "numericId": "7153134",
+          "variable": {
+            "id": "",
+            "name": "LED1",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "class": "local",
+            "location": "",
+            "documentation": "",
+            "debug": false
+          },
+          "executionOrder": 0,
+          "variant": "output-variable",
+          "negated": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "deletable": true,
+        "selectable": true,
+        "draggable": true,
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "BLOCK_3f3fb99a-378c-4bca-bd23-33246e0cf47e",
+        "type": "block",
+        "position": {
+          "x": 736,
+          "y": 80
+        },
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": 624,
+                "y": 208
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 48
+              },
+              "id": "IN",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 48,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 696,
+                "y": 208
+              },
+              "relPosition": {
+                "x": 72,
+                "y": 48
+              },
+              "id": "OUT",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 48,
+                "right": 0
+              }
+            }
+          ],
+          "inputHandles": [
+            {
+              "glbPosition": {
+                "x": 624,
+                "y": 208
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 48
+              },
+              "id": "IN",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 48,
+                "left": 0
+              }
+            }
+          ],
+          "outputHandles": [
+            {
+              "glbPosition": {
+                "x": 696,
+                "y": 208
+              },
+              "relPosition": {
+                "x": 72,
+                "y": 48
+              },
+              "id": "OUT",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 48,
+                "right": 0
+              }
+            }
+          ],
+          "inputConnector": {
+            "glbPosition": {
+              "x": 624,
+              "y": 208
+            },
+            "relPosition": {
+              "x": 0,
+              "y": 48
+            },
+            "id": "IN",
+            "position": "left",
+            "type": "target",
+            "style": {
+              "top": 48,
+              "left": 0
+            }
+          },
+          "outputConnector": {
+            "glbPosition": {
+              "x": 696,
+              "y": 208
+            },
+            "relPosition": {
+              "x": 72,
+              "y": 48
+            },
+            "id": "OUT",
+            "position": "right",
+            "type": "source",
+            "style": {
+              "top": 48,
+              "right": 0
+            }
+          },
+          "numericId": "5514717",
+          "variant": {
+            "name": "NOT",
+            "type": "function",
+            "variables": [
+              {
+                "name": "OUT",
+                "class": "output",
+                "type": {
+                  "definition": "generic-type",
+                  "value": "ANY_BIT"
+                }
+              },
+              {
+                "name": "IN",
+                "class": "input",
+                "type": {
+                  "definition": "generic-type",
+                  "value": "ANY_BIT"
+                }
+              }
+            ],
+            "documentation": "",
+            "extensible": false
+          },
+          "variable": {
+            "name": ""
+          },
+          "executionOrder": 0,
+          "executionControl": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "width": 72,
+        "height": 72,
+        "measured": {
+          "width": 72,
+          "height": 72
+        },
+        "draggable": true,
+        "selectable": true,
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "OUTPUT-VARIABLE_2000be77-1f65-4830-a3db-e59da7c4740c",
+        "type": "output-variable",
+        "position": {
+          "x": 992,
+          "y": 176
+        },
+        "width": 64,
+        "height": 32,
+        "measured": {
+          "width": 64,
+          "height": 32
+        },
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": 1248,
+                "y": 576
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 16
+              },
+              "id": "input-variable",
+              "position": "left",
+              "type": "target"
+            }
+          ],
+          "inputHandles": [
+            {
+              "glbPosition": {
+                "x": 1248,
+                "y": 576
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 16
+              },
+              "id": "input-variable",
+              "position": "left",
+              "type": "target"
+            }
+          ],
+          "outputHandles": [],
+          "inputConnector": {
+            "glbPosition": {
+              "x": 1248,
+              "y": 576
+            },
+            "relPosition": {
+              "x": 0,
+              "y": 16
+            },
+            "id": "input-variable",
+            "position": "left",
+            "type": "target"
+          },
+          "numericId": "5332211",
+          "variable": {
+            "name": "LED2",
+            "class": "external",
+            "type": {
+              "definition": "base-type",
+              "value": "bool"
+            },
+            "location": "",
+            "initialValue": null,
+            "documentation": "",
+            "debug": false
+          },
+          "executionOrder": 0,
+          "variant": "output-variable",
+          "negated": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "deletable": true,
+        "selectable": true,
+        "draggable": true,
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "BLOCK_ed747525-5f47-47b1-bbcc-996602449514",
+        "type": "block",
+        "position": {
+          "x": 816,
+          "y": 144
+        },
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": 1120,
+                "y": 576
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 48
+              },
+              "id": "IN",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 48,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 1192,
+                "y": 576
+              },
+              "relPosition": {
+                "x": 72,
+                "y": 48
+              },
+              "id": "OUT",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 48,
+                "right": 0
+              }
+            }
+          ],
+          "inputHandles": [
+            {
+              "glbPosition": {
+                "x": 1120,
+                "y": 576
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 48
+              },
+              "id": "IN",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 48,
+                "left": 0
+              }
+            }
+          ],
+          "outputHandles": [
+            {
+              "glbPosition": {
+                "x": 1192,
+                "y": 576
+              },
+              "relPosition": {
+                "x": 72,
+                "y": 48
+              },
+              "id": "OUT",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 48,
+                "right": 0
+              }
+            }
+          ],
+          "inputConnector": {
+            "glbPosition": {
+              "x": 1120,
+              "y": 576
+            },
+            "relPosition": {
+              "x": 0,
+              "y": 48
+            },
+            "id": "IN",
+            "position": "left",
+            "type": "target",
+            "style": {
+              "top": 48,
+              "left": 0
+            }
+          },
+          "outputConnector": {
+            "glbPosition": {
+              "x": 1192,
+              "y": 576
+            },
+            "relPosition": {
+              "x": 72,
+              "y": 48
+            },
+            "id": "OUT",
+            "position": "right",
+            "type": "source",
+            "style": {
+              "top": 48,
+              "right": 0
+            }
+          },
+          "numericId": "5486747",
+          "variant": {
+            "name": "NOT",
+            "type": "function",
+            "variables": [
+              {
+                "name": "OUT",
+                "class": "output",
+                "type": {
+                  "definition": "generic-type",
+                  "value": "ANY_BIT"
+                }
+              },
+              {
+                "name": "IN",
+                "class": "input",
+                "type": {
+                  "definition": "generic-type",
+                  "value": "ANY_BIT"
+                }
+              }
+            ],
+            "documentation": "",
+            "extensible": false
+          },
+          "variable": {
+            "name": ""
+          },
+          "executionOrder": 0,
+          "executionControl": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "width": 72,
+        "height": 72,
+        "measured": {
+          "width": 72,
+          "height": 72
+        },
+        "draggable": true,
+        "selectable": true,
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "BLOCK_42120c88-e194-41cf-ac2a-65e12a114958",
+        "type": "block",
+        "position": {
+          "x": 896,
+          "y": 208
+        },
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": 752,
+                "y": 416
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 48
+              },
+              "id": "IN",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 48,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 824,
+                "y": 416
+              },
+              "relPosition": {
+                "x": 72,
+                "y": 48
+              },
+              "id": "OUT",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 48,
+                "right": 0
+              }
+            }
+          ],
+          "inputHandles": [
+            {
+              "glbPosition": {
+                "x": 752,
+                "y": 416
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 48
+              },
+              "id": "IN",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 48,
+                "left": 0
+              }
+            }
+          ],
+          "outputHandles": [
+            {
+              "glbPosition": {
+                "x": 824,
+                "y": 416
+              },
+              "relPosition": {
+                "x": 72,
+                "y": 48
+              },
+              "id": "OUT",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 48,
+                "right": 0
+              }
+            }
+          ],
+          "inputConnector": {
+            "glbPosition": {
+              "x": 752,
+              "y": 416
+            },
+            "relPosition": {
+              "x": 0,
+              "y": 48
+            },
+            "id": "IN",
+            "position": "left",
+            "type": "target",
+            "style": {
+              "top": 48,
+              "left": 0
+            }
+          },
+          "outputConnector": {
+            "glbPosition": {
+              "x": 824,
+              "y": 416
+            },
+            "relPosition": {
+              "x": 72,
+              "y": 48
+            },
+            "id": "OUT",
+            "position": "right",
+            "type": "source",
+            "style": {
+              "top": 48,
+              "right": 0
+            }
+          },
+          "numericId": "9561958",
+          "variant": {
+            "name": "NOT",
+            "type": "function",
+            "variables": [
+              {
+                "name": "OUT",
+                "class": "output",
+                "type": {
+                  "definition": "generic-type",
+                  "value": "ANY_BIT"
+                }
+              },
+              {
+                "name": "IN",
+                "class": "input",
+                "type": {
+                  "definition": "generic-type",
+                  "value": "ANY_BIT"
+                }
+              }
+            ],
+            "documentation": "",
+            "extensible": false
+          },
+          "variable": {
+            "name": ""
+          },
+          "executionOrder": 0,
+          "executionControl": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "width": 72,
+        "height": 72,
+        "measured": {
+          "width": 72,
+          "height": 72
+        },
+        "draggable": true,
+        "selectable": true,
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "BLOCK_1105847a-4e11-4294-b66f-9805e1c226d5",
+        "type": "block",
+        "position": {
+          "x": 816,
+          "y": 272
+        },
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": 800,
+                "y": 512
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 48
+              },
+              "id": "IN",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 48,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 872,
+                "y": 512
+              },
+              "relPosition": {
+                "x": 72,
+                "y": 48
+              },
+              "id": "OUT",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 48,
+                "right": 0
+              }
+            }
+          ],
+          "inputHandles": [
+            {
+              "glbPosition": {
+                "x": 800,
+                "y": 512
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 48
+              },
+              "id": "IN",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 48,
+                "left": 0
+              }
+            }
+          ],
+          "outputHandles": [
+            {
+              "glbPosition": {
+                "x": 872,
+                "y": 512
+              },
+              "relPosition": {
+                "x": 72,
+                "y": 48
+              },
+              "id": "OUT",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 48,
+                "right": 0
+              }
+            }
+          ],
+          "inputConnector": {
+            "glbPosition": {
+              "x": 800,
+              "y": 512
+            },
+            "relPosition": {
+              "x": 0,
+              "y": 48
+            },
+            "id": "IN",
+            "position": "left",
+            "type": "target",
+            "style": {
+              "top": 48,
+              "left": 0
+            }
+          },
+          "outputConnector": {
+            "glbPosition": {
+              "x": 872,
+              "y": 512
+            },
+            "relPosition": {
+              "x": 72,
+              "y": 48
+            },
+            "id": "OUT",
+            "position": "right",
+            "type": "source",
+            "style": {
+              "top": 48,
+              "right": 0
+            }
+          },
+          "numericId": "661033",
+          "variant": {
+            "name": "NOT",
+            "type": "function",
+            "variables": [
+              {
+                "name": "OUT",
+                "class": "output",
+                "type": {
+                  "definition": "generic-type",
+                  "value": "ANY_BIT"
+                }
+              },
+              {
+                "name": "IN",
+                "class": "input",
+                "type": {
+                  "definition": "generic-type",
+                  "value": "ANY_BIT"
+                }
+              }
+            ],
+            "documentation": "",
+            "extensible": false
+          },
+          "variable": {
+            "name": ""
+          },
+          "executionOrder": 0,
+          "executionControl": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "width": 72,
+        "height": 72,
+        "measured": {
+          "width": 72,
+          "height": 72
+        },
+        "draggable": true,
+        "selectable": true,
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "BLOCK_70d313e1-cc1c-466a-9417-0c92a538c9a4",
+        "type": "block",
+        "position": {
+          "x": 896,
+          "y": 336
+        },
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": 864,
+                "y": 576
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 48
+              },
+              "id": "IN",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 48,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 936,
+                "y": 576
+              },
+              "relPosition": {
+                "x": 72,
+                "y": 48
+              },
+              "id": "OUT",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 48,
+                "right": 0
+              }
+            }
+          ],
+          "inputHandles": [
+            {
+              "glbPosition": {
+                "x": 864,
+                "y": 576
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 48
+              },
+              "id": "IN",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 48,
+                "left": 0
+              }
+            }
+          ],
+          "outputHandles": [
+            {
+              "glbPosition": {
+                "x": 936,
+                "y": 576
+              },
+              "relPosition": {
+                "x": 72,
+                "y": 48
+              },
+              "id": "OUT",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 48,
+                "right": 0
+              }
+            }
+          ],
+          "inputConnector": {
+            "glbPosition": {
+              "x": 864,
+              "y": 576
+            },
+            "relPosition": {
+              "x": 0,
+              "y": 48
+            },
+            "id": "IN",
+            "position": "left",
+            "type": "target",
+            "style": {
+              "top": 48,
+              "left": 0
+            }
+          },
+          "outputConnector": {
+            "glbPosition": {
+              "x": 936,
+              "y": 576
+            },
+            "relPosition": {
+              "x": 72,
+              "y": 48
+            },
+            "id": "OUT",
+            "position": "right",
+            "type": "source",
+            "style": {
+              "top": 48,
+              "right": 0
+            }
+          },
+          "numericId": "2924779",
+          "variant": {
+            "name": "NOT",
+            "type": "function",
+            "variables": [
+              {
+                "name": "OUT",
+                "class": "output",
+                "type": {
+                  "definition": "generic-type",
+                  "value": "ANY_BIT"
+                }
+              },
+              {
+                "name": "IN",
+                "class": "input",
+                "type": {
+                  "definition": "generic-type",
+                  "value": "ANY_BIT"
+                }
+              }
+            ],
+            "documentation": "",
+            "extensible": false
+          },
+          "variable": {
+            "name": ""
+          },
+          "executionOrder": 0,
+          "executionControl": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "width": 72,
+        "height": 72,
+        "measured": {
+          "width": 72,
+          "height": 72
+        },
+        "draggable": true,
+        "selectable": true,
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "BLOCK_d3498342-949a-4f19-8b5f-a640ba219a85",
+        "type": "block",
+        "position": {
+          "x": 816,
+          "y": 400
+        },
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": 896,
+                "y": 560
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 48
+              },
+              "id": "IN",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 48,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 968,
+                "y": 560
+              },
+              "relPosition": {
+                "x": 72,
+                "y": 48
+              },
+              "id": "OUT",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 48,
+                "right": 0
+              }
+            }
+          ],
+          "inputHandles": [
+            {
+              "glbPosition": {
+                "x": 896,
+                "y": 560
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 48
+              },
+              "id": "IN",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 48,
+                "left": 0
+              }
+            }
+          ],
+          "outputHandles": [
+            {
+              "glbPosition": {
+                "x": 968,
+                "y": 560
+              },
+              "relPosition": {
+                "x": 72,
+                "y": 48
+              },
+              "id": "OUT",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 48,
+                "right": 0
+              }
+            }
+          ],
+          "inputConnector": {
+            "glbPosition": {
+              "x": 896,
+              "y": 560
+            },
+            "relPosition": {
+              "x": 0,
+              "y": 48
+            },
+            "id": "IN",
+            "position": "left",
+            "type": "target",
+            "style": {
+              "top": 48,
+              "left": 0
+            }
+          },
+          "outputConnector": {
+            "glbPosition": {
+              "x": 968,
+              "y": 560
+            },
+            "relPosition": {
+              "x": 72,
+              "y": 48
+            },
+            "id": "OUT",
+            "position": "right",
+            "type": "source",
+            "style": {
+              "top": 48,
+              "right": 0
+            }
+          },
+          "numericId": "2377202",
+          "variant": {
+            "name": "NOT",
+            "type": "function",
+            "variables": [
+              {
+                "name": "OUT",
+                "class": "output",
+                "type": {
+                  "definition": "generic-type",
+                  "value": "ANY_BIT"
+                }
+              },
+              {
+                "name": "IN",
+                "class": "input",
+                "type": {
+                  "definition": "generic-type",
+                  "value": "ANY_BIT"
+                }
+              }
+            ],
+            "documentation": "",
+            "extensible": false
+          },
+          "variable": {
+            "name": ""
+          },
+          "executionOrder": 0,
+          "executionControl": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "width": 72,
+        "height": 72,
+        "measured": {
+          "width": 72,
+          "height": 72
+        },
+        "draggable": true,
+        "selectable": true,
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "BLOCK_31dfdd20-ef34-4bef-9686-5fd63c1ded45",
+        "type": "block",
+        "position": {
+          "x": 896,
+          "y": 464
+        },
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": 944,
+                "y": 528
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 48
+              },
+              "id": "IN",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 48,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 1016,
+                "y": 528
+              },
+              "relPosition": {
+                "x": 72,
+                "y": 48
+              },
+              "id": "OUT",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 48,
+                "right": 0
+              }
+            }
+          ],
+          "inputHandles": [
+            {
+              "glbPosition": {
+                "x": 944,
+                "y": 528
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 48
+              },
+              "id": "IN",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 48,
+                "left": 0
+              }
+            }
+          ],
+          "outputHandles": [
+            {
+              "glbPosition": {
+                "x": 1016,
+                "y": 528
+              },
+              "relPosition": {
+                "x": 72,
+                "y": 48
+              },
+              "id": "OUT",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 48,
+                "right": 0
+              }
+            }
+          ],
+          "inputConnector": {
+            "glbPosition": {
+              "x": 944,
+              "y": 528
+            },
+            "relPosition": {
+              "x": 0,
+              "y": 48
+            },
+            "id": "IN",
+            "position": "left",
+            "type": "target",
+            "style": {
+              "top": 48,
+              "left": 0
+            }
+          },
+          "outputConnector": {
+            "glbPosition": {
+              "x": 1016,
+              "y": 528
+            },
+            "relPosition": {
+              "x": 72,
+              "y": 48
+            },
+            "id": "OUT",
+            "position": "right",
+            "type": "source",
+            "style": {
+              "top": 48,
+              "right": 0
+            }
+          },
+          "numericId": "2716028",
+          "variant": {
+            "name": "NOT",
+            "type": "function",
+            "variables": [
+              {
+                "name": "OUT",
+                "class": "output",
+                "type": {
+                  "definition": "generic-type",
+                  "value": "ANY_BIT"
+                }
+              },
+              {
+                "name": "IN",
+                "class": "input",
+                "type": {
+                  "definition": "generic-type",
+                  "value": "ANY_BIT"
+                }
+              }
+            ],
+            "documentation": "",
+            "extensible": false
+          },
+          "variable": {
+            "name": ""
+          },
+          "executionOrder": 0,
+          "executionControl": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "width": 72,
+        "height": 72,
+        "measured": {
+          "width": 72,
+          "height": 72
+        },
+        "draggable": true,
+        "selectable": true,
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "OUTPUT-VARIABLE_c3066e8a-65d9-4676-b9fd-9624e93d3cfd",
+        "type": "output-variable",
+        "position": {
+          "x": 992,
+          "y": 240
+        },
+        "width": 64,
+        "height": 32,
+        "measured": {
+          "width": 64,
+          "height": 32
+        },
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": 1088,
+                "y": 304
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 16
+              },
+              "id": "input-variable",
+              "position": "left",
+              "type": "target"
+            }
+          ],
+          "inputHandles": [
+            {
+              "glbPosition": {
+                "x": 1088,
+                "y": 304
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 16
+              },
+              "id": "input-variable",
+              "position": "left",
+              "type": "target"
+            }
+          ],
+          "outputHandles": [],
+          "inputConnector": {
+            "glbPosition": {
+              "x": 1088,
+              "y": 304
+            },
+            "relPosition": {
+              "x": 0,
+              "y": 16
+            },
+            "id": "input-variable",
+            "position": "left",
+            "type": "target"
+          },
+          "numericId": "10314995",
+          "variable": {
+            "id": "",
+            "name": "LED3",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "class": "local",
+            "location": "",
+            "documentation": "",
+            "debug": false
+          },
+          "executionOrder": 0,
+          "variant": "output-variable",
+          "negated": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "deletable": true,
+        "selectable": true,
+        "draggable": true,
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "OUTPUT-VARIABLE_e3214179-8dbd-4530-ae13-996e6eed4953",
+        "type": "output-variable",
+        "position": {
+          "x": 992,
+          "y": 288
+        },
+        "width": 64,
+        "height": 32,
+        "measured": {
+          "width": 64,
+          "height": 32
+        },
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": 1088,
+                "y": 368
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 16
+              },
+              "id": "input-variable",
+              "position": "left",
+              "type": "target"
+            }
+          ],
+          "inputHandles": [
+            {
+              "glbPosition": {
+                "x": 1088,
+                "y": 368
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 16
+              },
+              "id": "input-variable",
+              "position": "left",
+              "type": "target"
+            }
+          ],
+          "outputHandles": [],
+          "inputConnector": {
+            "glbPosition": {
+              "x": 1088,
+              "y": 368
+            },
+            "relPosition": {
+              "x": 0,
+              "y": 16
+            },
+            "id": "input-variable",
+            "position": "left",
+            "type": "target"
+          },
+          "numericId": "4404802",
+          "variable": {
+            "id": "",
+            "name": "LED4",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "class": "local",
+            "location": "",
+            "documentation": "",
+            "debug": false
+          },
+          "executionOrder": 0,
+          "variant": "output-variable",
+          "negated": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "deletable": true,
+        "selectable": true,
+        "draggable": true,
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "OUTPUT-VARIABLE_6f59abd0-afaa-46aa-bc2c-75ed75fe238d",
+        "type": "output-variable",
+        "position": {
+          "x": 992,
+          "y": 368
+        },
+        "width": 64,
+        "height": 32,
+        "measured": {
+          "width": 64,
+          "height": 32
+        },
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": 1168,
+                "y": 528
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 16
+              },
+              "id": "input-variable",
+              "position": "left",
+              "type": "target"
+            }
+          ],
+          "inputHandles": [
+            {
+              "glbPosition": {
+                "x": 1168,
+                "y": 528
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 16
+              },
+              "id": "input-variable",
+              "position": "left",
+              "type": "target"
+            }
+          ],
+          "outputHandles": [],
+          "inputConnector": {
+            "glbPosition": {
+              "x": 1168,
+              "y": 528
+            },
+            "relPosition": {
+              "x": 0,
+              "y": 16
+            },
+            "id": "input-variable",
+            "position": "left",
+            "type": "target"
+          },
+          "numericId": "3945201",
+          "variable": {
+            "id": "",
+            "name": "LED5",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "class": "local",
+            "location": "",
+            "documentation": "",
+            "debug": false
+          },
+          "executionOrder": 0,
+          "variant": "output-variable",
+          "negated": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "deletable": true,
+        "selectable": true,
+        "draggable": true,
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "OUTPUT-VARIABLE_c898c688-aa12-40b8-ba2a-a8c530eb1098",
+        "type": "output-variable",
+        "position": {
+          "x": 992,
+          "y": 432
+        },
+        "width": 64,
+        "height": 32,
+        "measured": {
+          "width": 64,
+          "height": 32
+        },
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": 1136,
+                "y": 592
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 16
+              },
+              "id": "input-variable",
+              "position": "left",
+              "type": "target"
+            }
+          ],
+          "inputHandles": [
+            {
+              "glbPosition": {
+                "x": 1136,
+                "y": 592
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 16
+              },
+              "id": "input-variable",
+              "position": "left",
+              "type": "target"
+            }
+          ],
+          "outputHandles": [],
+          "inputConnector": {
+            "glbPosition": {
+              "x": 1136,
+              "y": 592
+            },
+            "relPosition": {
+              "x": 0,
+              "y": 16
+            },
+            "id": "input-variable",
+            "position": "left",
+            "type": "target"
+          },
+          "numericId": "997617",
+          "variable": {
+            "id": "",
+            "name": "LED6",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "class": "local",
+            "location": "",
+            "documentation": "",
+            "debug": false
+          },
+          "executionOrder": 0,
+          "variant": "output-variable",
+          "negated": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "deletable": true,
+        "selectable": true,
+        "draggable": true,
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "OUTPUT-VARIABLE_5c75919f-20cc-4135-91c5-54c23be40dc6",
+        "type": "output-variable",
+        "position": {
+          "x": 992,
+          "y": 496
+        },
+        "width": 64,
+        "height": 32,
+        "measured": {
+          "width": 64,
+          "height": 32
+        },
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": 1120,
+                "y": 576
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 16
+              },
+              "id": "input-variable",
+              "position": "left",
+              "type": "target"
+            }
+          ],
+          "inputHandles": [
+            {
+              "glbPosition": {
+                "x": 1120,
+                "y": 576
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 16
+              },
+              "id": "input-variable",
+              "position": "left",
+              "type": "target"
+            }
+          ],
+          "outputHandles": [],
+          "inputConnector": {
+            "glbPosition": {
+              "x": 1120,
+              "y": 576
+            },
+            "relPosition": {
+              "x": 0,
+              "y": 16
+            },
+            "id": "input-variable",
+            "position": "left",
+            "type": "target"
+          },
+          "numericId": "9916343",
+          "variable": {
+            "name": "LED7",
+            "class": "external",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "",
+            "initialValue": null,
+            "documentation": "",
+            "debug": false
+          },
+          "executionOrder": 0,
+          "variant": "output-variable",
+          "negated": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "deletable": true,
+        "selectable": true,
+        "draggable": true,
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "BLOCK_3ad87452-e85a-452d-9e4d-7bdb7c711e31",
+        "type": "block",
+        "position": {
+          "x": 816,
+          "y": 528
+        },
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": 1104,
+                "y": 720
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 48
+              },
+              "id": "IN",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 48,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 1176,
+                "y": 720
+              },
+              "relPosition": {
+                "x": 72,
+                "y": 48
+              },
+              "id": "OUT",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 48,
+                "right": 0
+              }
+            }
+          ],
+          "inputHandles": [
+            {
+              "glbPosition": {
+                "x": 1104,
+                "y": 720
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 48
+              },
+              "id": "IN",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 48,
+                "left": 0
+              }
+            }
+          ],
+          "outputHandles": [
+            {
+              "glbPosition": {
+                "x": 1176,
+                "y": 720
+              },
+              "relPosition": {
+                "x": 72,
+                "y": 48
+              },
+              "id": "OUT",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 48,
+                "right": 0
+              }
+            }
+          ],
+          "inputConnector": {
+            "glbPosition": {
+              "x": 1104,
+              "y": 720
+            },
+            "relPosition": {
+              "x": 0,
+              "y": 48
+            },
+            "id": "IN",
+            "position": "left",
+            "type": "target",
+            "style": {
+              "top": 48,
+              "left": 0
+            }
+          },
+          "outputConnector": {
+            "glbPosition": {
+              "x": 1176,
+              "y": 720
+            },
+            "relPosition": {
+              "x": 72,
+              "y": 48
+            },
+            "id": "OUT",
+            "position": "right",
+            "type": "source",
+            "style": {
+              "top": 48,
+              "right": 0
+            }
+          },
+          "numericId": "5829797",
+          "variant": {
+            "name": "NOT",
+            "type": "function",
+            "variables": [
+              {
+                "name": "OUT",
+                "class": "output",
+                "type": {
+                  "definition": "generic-type",
+                  "value": "ANY_BIT"
+                }
+              },
+              {
+                "name": "IN",
+                "class": "input",
+                "type": {
+                  "definition": "generic-type",
+                  "value": "ANY_BIT"
+                }
+              }
+            ],
+            "documentation": "",
+            "extensible": false
+          },
+          "variable": {
+            "name": ""
+          },
+          "executionOrder": 0,
+          "executionControl": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "width": 72,
+        "height": 72,
+        "measured": {
+          "width": 72,
+          "height": 72
+        },
+        "draggable": true,
+        "selectable": true,
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "OUTPUT-VARIABLE_a5b4f69e-7b57-40e8-866f-d2d327ae703c",
+        "type": "output-variable",
+        "position": {
+          "x": 992,
+          "y": 560
+        },
+        "width": 64,
+        "height": 32,
+        "measured": {
+          "width": 64,
+          "height": 32
+        },
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": 1200,
+                "y": 720
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 16
+              },
+              "id": "input-variable",
+              "position": "left",
+              "type": "target"
+            }
+          ],
+          "inputHandles": [
+            {
+              "glbPosition": {
+                "x": 1200,
+                "y": 720
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 16
+              },
+              "id": "input-variable",
+              "position": "left",
+              "type": "target"
+            }
+          ],
+          "outputHandles": [],
+          "inputConnector": {
+            "glbPosition": {
+              "x": 1200,
+              "y": 720
+            },
+            "relPosition": {
+              "x": 0,
+              "y": 16
+            },
+            "id": "input-variable",
+            "position": "left",
+            "type": "target"
+          },
+          "numericId": "2249388",
+          "variable": {
+            "name": "LED8",
+            "class": "external",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "",
+            "initialValue": null,
+            "documentation": "",
+            "debug": false
+          },
+          "executionOrder": 0,
+          "variant": "output-variable",
+          "negated": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "deletable": true,
+        "selectable": true,
+        "draggable": true,
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "INPUT-VARIABLE_92aa69fe-978d-4b7c-8c0b-7ea0e9a237b9",
+        "type": "input-variable",
+        "position": {
+          "x": 336,
+          "y": 528
+        },
+        "width": 64,
+        "height": 32,
+        "measured": {
+          "width": 64,
+          "height": 32
+        },
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": 272,
+                "y": 544
+              },
+              "relPosition": {
+                "x": 48,
+                "y": 16
+              },
+              "id": "output-variable",
+              "position": "right",
+              "type": "source"
+            }
+          ],
+          "inputHandles": [],
+          "outputHandles": [
+            {
+              "glbPosition": {
+                "x": 272,
+                "y": 544
+              },
+              "relPosition": {
+                "x": 48,
+                "y": 16
+              },
+              "id": "output-variable",
+              "position": "right",
+              "type": "source"
+            }
+          ],
+          "outputConnector": {
+            "glbPosition": {
+              "x": 272,
+              "y": 544
+            },
+            "relPosition": {
+              "x": 48,
+              "y": 16
+            },
+            "id": "output-variable",
+            "position": "right",
+            "type": "source"
+          },
+          "numericId": "9949889",
+          "variable": {
+            "id": "",
+            "name": "A3",
+            "type": {
+              "definition": "base-type",
+              "value": "INT"
+            },
+            "class": "local",
+            "location": "",
+            "documentation": "",
+            "debug": false
+          },
+          "executionOrder": 0,
+          "variant": "input-variable",
+          "negated": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "deletable": true,
+        "selectable": true,
+        "draggable": true,
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "INPUT-VARIABLE_62201cb2-23ef-47fe-816c-3c4198f4e668",
+        "type": "input-variable",
+        "position": {
+          "x": -352,
+          "y": -160
+        },
+        "width": 64,
+        "height": 32,
+        "measured": {
+          "width": 64,
+          "height": 32
+        },
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": -48,
+                "y": 128
+              },
+              "relPosition": {
+                "x": 48,
+                "y": 16
+              },
+              "id": "output-variable",
+              "position": "right",
+              "type": "source"
+            }
+          ],
+          "inputHandles": [],
+          "outputHandles": [
+            {
+              "glbPosition": {
+                "x": -48,
+                "y": 128
+              },
+              "relPosition": {
+                "x": 48,
+                "y": 16
+              },
+              "id": "output-variable",
+              "position": "right",
+              "type": "source"
+            }
+          ],
+          "outputConnector": {
+            "glbPosition": {
+              "x": -48,
+              "y": 128
+            },
+            "relPosition": {
+              "x": 48,
+              "y": 16
+            },
+            "id": "output-variable",
+            "position": "right",
+            "type": "source"
+          },
+          "numericId": "9428463",
+          "variable": {
+            "name": "0"
+          },
+          "executionOrder": 0,
+          "variant": "input-variable",
+          "negated": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "deletable": true,
+        "selectable": true,
+        "draggable": true,
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "INPUT-VARIABLE_3d890a7c-2fc0-41f4-8f4b-581cd32fef24",
+        "type": "input-variable",
+        "position": {
+          "x": -352,
+          "y": -112
+        },
+        "width": 64,
+        "height": 32,
+        "measured": {
+          "width": 64,
+          "height": 32
+        },
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": -224,
+                "y": -32
+              },
+              "relPosition": {
+                "x": 48,
+                "y": 16
+              },
+              "id": "output-variable",
+              "position": "right",
+              "type": "source"
+            }
+          ],
+          "inputHandles": [],
+          "outputHandles": [
+            {
+              "glbPosition": {
+                "x": -224,
+                "y": -32
+              },
+              "relPosition": {
+                "x": 48,
+                "y": 16
+              },
+              "id": "output-variable",
+              "position": "right",
+              "type": "source"
+            }
+          ],
+          "outputConnector": {
+            "glbPosition": {
+              "x": -224,
+              "y": -32
+            },
+            "relPosition": {
+              "x": 48,
+              "y": 16
+            },
+            "id": "output-variable",
+            "position": "right",
+            "type": "source"
+          },
+          "numericId": "6922104",
+          "variable": {
+            "name": "0"
+          },
+          "executionOrder": 0,
+          "variant": "input-variable",
+          "negated": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "deletable": true,
+        "selectable": true,
+        "draggable": true,
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "INPUT-VARIABLE_6813f609-ecd6-4f50-8843-3f2ed50ab1c3",
+        "type": "input-variable",
+        "position": {
+          "x": -416,
+          "y": -16
+        },
+        "width": 64,
+        "height": 32,
+        "measured": {
+          "width": 64,
+          "height": 32
+        },
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": 32,
+                "y": 160
+              },
+              "relPosition": {
+                "x": 48,
+                "y": 16
+              },
+              "id": "output-variable",
+              "position": "right",
+              "type": "source"
+            }
+          ],
+          "inputHandles": [],
+          "outputHandles": [
+            {
+              "glbPosition": {
+                "x": 32,
+                "y": 160
+              },
+              "relPosition": {
+                "x": 48,
+                "y": 16
+              },
+              "id": "output-variable",
+              "position": "right",
+              "type": "source"
+            }
+          ],
+          "outputConnector": {
+            "glbPosition": {
+              "x": 32,
+              "y": 160
+            },
+            "relPosition": {
+              "x": 48,
+              "y": 16
+            },
+            "id": "output-variable",
+            "position": "right",
+            "type": "source"
+          },
+          "numericId": "8432459",
+          "variable": {
+            "id": "",
+            "name": "S2",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "class": "local",
+            "location": "",
+            "documentation": "",
+            "debug": false
+          },
+          "executionOrder": 0,
+          "variant": "input-variable",
+          "negated": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "deletable": true,
+        "selectable": true,
+        "draggable": true,
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "INPUT-VARIABLE_a9ba7c01-bfa1-4364-9f0c-0cd7bf40c32c",
+        "type": "input-variable",
+        "position": {
+          "x": -352,
+          "y": 80
+        },
+        "width": 64,
+        "height": 32,
+        "measured": {
+          "width": 64,
+          "height": 32
+        },
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": 160,
+                "y": 256
+              },
+              "relPosition": {
+                "x": 48,
+                "y": 16
+              },
+              "id": "output-variable",
+              "position": "right",
+              "type": "source"
+            }
+          ],
+          "inputHandles": [],
+          "outputHandles": [
+            {
+              "glbPosition": {
+                "x": 160,
+                "y": 256
+              },
+              "relPosition": {
+                "x": 48,
+                "y": 16
+              },
+              "id": "output-variable",
+              "position": "right",
+              "type": "source"
+            }
+          ],
+          "outputConnector": {
+            "glbPosition": {
+              "x": 160,
+              "y": 256
+            },
+            "relPosition": {
+              "x": 48,
+              "y": 16
+            },
+            "id": "output-variable",
+            "position": "right",
+            "type": "source"
+          },
+          "numericId": "2914225",
+          "variable": {
+            "name": "0"
+          },
+          "executionOrder": 0,
+          "variant": "input-variable",
+          "negated": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "deletable": true,
+        "selectable": true,
+        "draggable": true,
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "INPUT-VARIABLE_bd984227-94b8-4e97-8295-97a1c15ba36d",
+        "type": "input-variable",
+        "position": {
+          "x": -352,
+          "y": 32
+        },
+        "width": 64,
+        "height": 32,
+        "measured": {
+          "width": 64,
+          "height": 32
+        },
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": -192,
+                "y": 48
+              },
+              "relPosition": {
+                "x": 48,
+                "y": 16
+              },
+              "id": "output-variable",
+              "position": "right",
+              "type": "source"
+            }
+          ],
+          "inputHandles": [],
+          "outputHandles": [
+            {
+              "glbPosition": {
+                "x": -192,
+                "y": 48
+              },
+              "relPosition": {
+                "x": 48,
+                "y": 16
+              },
+              "id": "output-variable",
+              "position": "right",
+              "type": "source"
+            }
+          ],
+          "outputConnector": {
+            "glbPosition": {
+              "x": -192,
+              "y": 48
+            },
+            "relPosition": {
+              "x": 48,
+              "y": 16
+            },
+            "id": "output-variable",
+            "position": "right",
+            "type": "source"
+          },
+          "numericId": "2985489",
+          "variable": {
+            "name": "0"
+          },
+          "executionOrder": 0,
+          "variant": "input-variable",
+          "negated": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "deletable": true,
+        "selectable": true,
+        "draggable": true,
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "INPUT-VARIABLE_79cca250-a2b0-4037-8cf8-3cc3db3b1b8e",
+        "type": "input-variable",
+        "position": {
+          "x": -416,
+          "y": 176
+        },
+        "width": 64,
+        "height": 32,
+        "measured": {
+          "width": 64,
+          "height": 32
+        },
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": -224,
+                "y": 416
+              },
+              "relPosition": {
+                "x": 48,
+                "y": 16
+              },
+              "id": "output-variable",
+              "position": "right",
+              "type": "source"
+            }
+          ],
+          "inputHandles": [],
+          "outputHandles": [
+            {
+              "glbPosition": {
+                "x": -224,
+                "y": 416
+              },
+              "relPosition": {
+                "x": 48,
+                "y": 16
+              },
+              "id": "output-variable",
+              "position": "right",
+              "type": "source"
+            }
+          ],
+          "outputConnector": {
+            "glbPosition": {
+              "x": -224,
+              "y": 416
+            },
+            "relPosition": {
+              "x": 48,
+              "y": 16
+            },
+            "id": "output-variable",
+            "position": "right",
+            "type": "source"
+          },
+          "numericId": "4823949",
+          "variable": {
+            "id": "",
+            "name": "S3",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "class": "local",
+            "location": "",
+            "documentation": "",
+            "debug": false
+          },
+          "executionOrder": 0,
+          "variant": "input-variable",
+          "negated": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "deletable": true,
+        "selectable": true,
+        "draggable": true,
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "INPUT-VARIABLE_66f8fc80-6780-40ec-b6bd-6eef50b39ccf",
+        "type": "input-variable",
+        "position": {
+          "x": -352,
+          "y": 272
+        },
+        "width": 64,
+        "height": 32,
+        "measured": {
+          "width": 64,
+          "height": 32
+        },
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": -96,
+                "y": 512
+              },
+              "relPosition": {
+                "x": 48,
+                "y": 16
+              },
+              "id": "output-variable",
+              "position": "right",
+              "type": "source"
+            }
+          ],
+          "inputHandles": [],
+          "outputHandles": [
+            {
+              "glbPosition": {
+                "x": -96,
+                "y": 512
+              },
+              "relPosition": {
+                "x": 48,
+                "y": 16
+              },
+              "id": "output-variable",
+              "position": "right",
+              "type": "source"
+            }
+          ],
+          "outputConnector": {
+            "glbPosition": {
+              "x": -96,
+              "y": 512
+            },
+            "relPosition": {
+              "x": 48,
+              "y": 16
+            },
+            "id": "output-variable",
+            "position": "right",
+            "type": "source"
+          },
+          "numericId": "2854868",
+          "variable": {
+            "name": "0"
+          },
+          "executionOrder": 0,
+          "variant": "input-variable",
+          "negated": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "deletable": true,
+        "selectable": true,
+        "draggable": true,
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "INPUT-VARIABLE_c4db4a9a-2d02-4786-a213-4212fafd6eb6",
+        "type": "input-variable",
+        "position": {
+          "x": -352,
+          "y": 224
+        },
+        "width": 64,
+        "height": 32,
+        "measured": {
+          "width": 64,
+          "height": 32
+        },
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": -96,
+                "y": 464
+              },
+              "relPosition": {
+                "x": 48,
+                "y": 16
+              },
+              "id": "output-variable",
+              "position": "right",
+              "type": "source"
+            }
+          ],
+          "inputHandles": [],
+          "outputHandles": [
+            {
+              "glbPosition": {
+                "x": -96,
+                "y": 464
+              },
+              "relPosition": {
+                "x": 48,
+                "y": 16
+              },
+              "id": "output-variable",
+              "position": "right",
+              "type": "source"
+            }
+          ],
+          "outputConnector": {
+            "glbPosition": {
+              "x": -96,
+              "y": 464
+            },
+            "relPosition": {
+              "x": 48,
+              "y": 16
+            },
+            "id": "output-variable",
+            "position": "right",
+            "type": "source"
+          },
+          "numericId": "9018073",
+          "variable": {
+            "name": "0"
+          },
+          "executionOrder": 0,
+          "variant": "input-variable",
+          "negated": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "deletable": true,
+        "selectable": true,
+        "draggable": true,
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "INPUT-VARIABLE_cd409d60-8e88-4a8b-9c4d-0777991f565d",
+        "type": "input-variable",
+        "position": {
+          "x": -416,
+          "y": 368
+        },
+        "width": 64,
+        "height": 32,
+        "measured": {
+          "width": 64,
+          "height": 32
+        },
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": -32,
+                "y": 496
+              },
+              "relPosition": {
+                "x": 48,
+                "y": 16
+              },
+              "id": "output-variable",
+              "position": "right",
+              "type": "source"
+            }
+          ],
+          "inputHandles": [],
+          "outputHandles": [
+            {
+              "glbPosition": {
+                "x": -32,
+                "y": 496
+              },
+              "relPosition": {
+                "x": 48,
+                "y": 16
+              },
+              "id": "output-variable",
+              "position": "right",
+              "type": "source"
+            }
+          ],
+          "outputConnector": {
+            "glbPosition": {
+              "x": -32,
+              "y": 496
+            },
+            "relPosition": {
+              "x": 48,
+              "y": 16
+            },
+            "id": "output-variable",
+            "position": "right",
+            "type": "source"
+          },
+          "numericId": "7758933",
+          "variable": {
+            "id": "",
+            "name": "S4",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "class": "local",
+            "location": "",
+            "documentation": "",
+            "debug": false
+          },
+          "executionOrder": 0,
+          "variant": "input-variable",
+          "negated": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "deletable": true,
+        "selectable": true,
+        "draggable": true,
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "INPUT-VARIABLE_1f388ecd-8f15-402b-a393-8c5ae7065894",
+        "type": "input-variable",
+        "position": {
+          "x": -352,
+          "y": 464
+        },
+        "width": 64,
+        "height": 32,
+        "measured": {
+          "width": 64,
+          "height": 32
+        },
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": 96,
+                "y": 592
+              },
+              "relPosition": {
+                "x": 48,
+                "y": 16
+              },
+              "id": "output-variable",
+              "position": "right",
+              "type": "source"
+            }
+          ],
+          "inputHandles": [],
+          "outputHandles": [
+            {
+              "glbPosition": {
+                "x": 96,
+                "y": 592
+              },
+              "relPosition": {
+                "x": 48,
+                "y": 16
+              },
+              "id": "output-variable",
+              "position": "right",
+              "type": "source"
+            }
+          ],
+          "outputConnector": {
+            "glbPosition": {
+              "x": 96,
+              "y": 592
+            },
+            "relPosition": {
+              "x": 48,
+              "y": 16
+            },
+            "id": "output-variable",
+            "position": "right",
+            "type": "source"
+          },
+          "numericId": "6126436",
+          "variable": {
+            "name": "0"
+          },
+          "executionOrder": 0,
+          "variant": "input-variable",
+          "negated": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "deletable": true,
+        "selectable": true,
+        "draggable": true,
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "INPUT-VARIABLE_504bf64a-5442-4788-a3ea-98c4bc41b9cc",
+        "type": "input-variable",
+        "position": {
+          "x": -352,
+          "y": 416
+        },
+        "width": 64,
+        "height": 32,
+        "measured": {
+          "width": 64,
+          "height": 32
+        },
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": 96,
+                "y": 544
+              },
+              "relPosition": {
+                "x": 48,
+                "y": 16
+              },
+              "id": "output-variable",
+              "position": "right",
+              "type": "source"
+            }
+          ],
+          "inputHandles": [],
+          "outputHandles": [
+            {
+              "glbPosition": {
+                "x": 96,
+                "y": 544
+              },
+              "relPosition": {
+                "x": 48,
+                "y": 16
+              },
+              "id": "output-variable",
+              "position": "right",
+              "type": "source"
+            }
+          ],
+          "outputConnector": {
+            "glbPosition": {
+              "x": 96,
+              "y": 544
+            },
+            "relPosition": {
+              "x": 48,
+              "y": 16
+            },
+            "id": "output-variable",
+            "position": "right",
+            "type": "source"
+          },
+          "numericId": "782068",
+          "variable": {
+            "name": "0"
+          },
+          "executionOrder": 0,
+          "variant": "input-variable",
+          "negated": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "deletable": true,
+        "selectable": true,
+        "draggable": true,
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "BLOCK_002e512e-64bd-4eb1-9f56-c7403ee12a7d",
+        "type": "block",
+        "position": {
+          "x": -240,
+          "y": 336
+        },
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": -32,
+                "y": 464
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 48
+              },
+              "id": "IN1",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 48,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": -32,
+                "y": 512
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 96
+              },
+              "id": "PB_SW",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 96,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": -32,
+                "y": 560
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 144
+              },
+              "id": "NO_NC",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 144,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 184,
+                "y": 464
+              },
+              "relPosition": {
+                "x": 216,
+                "y": 48
+              },
+              "id": "OUT",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 48,
+                "right": 0
+              }
+            }
+          ],
+          "inputHandles": [
+            {
+              "glbPosition": {
+                "x": -32,
+                "y": 464
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 48
+              },
+              "id": "IN1",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 48,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": -32,
+                "y": 512
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 96
+              },
+              "id": "PB_SW",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 96,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": -32,
+                "y": 560
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 144
+              },
+              "id": "NO_NC",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 144,
+                "left": 0
+              }
+            }
+          ],
+          "outputHandles": [
+            {
+              "glbPosition": {
+                "x": 184,
+                "y": 464
+              },
+              "relPosition": {
+                "x": 216,
+                "y": 48
+              },
+              "id": "OUT",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 48,
+                "right": 0
+              }
+            }
+          ],
+          "inputConnector": {
+            "glbPosition": {
+              "x": -32,
+              "y": 464
+            },
+            "relPosition": {
+              "x": 0,
+              "y": 48
+            },
+            "id": "IN1",
+            "position": "left",
+            "type": "target",
+            "style": {
+              "top": 48,
+              "left": 0
+            }
+          },
+          "outputConnector": {
+            "glbPosition": {
+              "x": 184,
+              "y": 464
+            },
+            "relPosition": {
+              "x": 216,
+              "y": 48
+            },
+            "id": "OUT",
+            "position": "right",
+            "type": "source",
+            "style": {
+              "top": 48,
+              "right": 0
+            }
+          },
+          "numericId": "5838180",
+          "variant": {
+            "name": "ESP32_TASTER_SCHALTER",
+            "type": "function-block",
+            "variables": [
+              {
+                "name": "OUT",
+                "class": "output",
+                "type": {
+                  "definition": "base-type",
+                  "value": "BOOL"
+                }
+              },
+              {
+                "name": "IN1",
+                "class": "input",
+                "type": {
+                  "definition": "base-type",
+                  "value": "BOOL"
+                }
+              },
+              {
+                "name": "PB_SW",
+                "class": "input",
+                "type": {
+                  "definition": "base-type",
+                  "value": "BOOL"
+                }
+              },
+              {
+                "name": "NO_NC",
+                "class": "input",
+                "type": {
+                  "definition": "base-type",
+                  "value": "BOOL"
+                }
+              }
+            ],
+            "documentation": "PB_SW: 0=Taster, 1=Schalter;   NO_NC: 0=Schließer, 1=Öffner",
+            "extensible": false
+          },
+          "variable": {
+            "id": "661652b6-efe3-4fb5-9af3-cb0c8c97e224",
+            "name": "ESP32_TASTER_SCHALTER4",
+            "type": {
+              "definition": "derived",
+              "value": "ESP32_TASTER_SCHALTER"
+            },
+            "class": "local",
+            "location": "",
+            "documentation": "",
+            "debug": false
+          },
+          "executionOrder": 0,
+          "executionControl": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "width": 216,
+        "height": 168,
+        "measured": {
+          "width": 216,
+          "height": 168
+        },
+        "draggable": true,
+        "selectable": true,
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "BLOCK_605d39fb-310f-4c94-bf2a-1427aed0d990",
+        "type": "block",
+        "position": {
+          "x": -240,
+          "y": 144
+        },
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": -80,
+                "y": 224
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 48
+              },
+              "id": "IN1",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 48,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": -80,
+                "y": 272
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 96
+              },
+              "id": "PB_SW",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 96,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": -80,
+                "y": 320
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 144
+              },
+              "id": "NO_NC",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 144,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 136,
+                "y": 224
+              },
+              "relPosition": {
+                "x": 216,
+                "y": 48
+              },
+              "id": "OUT",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 48,
+                "right": 0
+              }
+            }
+          ],
+          "inputHandles": [
+            {
+              "glbPosition": {
+                "x": -80,
+                "y": 224
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 48
+              },
+              "id": "IN1",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 48,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": -80,
+                "y": 272
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 96
+              },
+              "id": "PB_SW",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 96,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": -80,
+                "y": 320
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 144
+              },
+              "id": "NO_NC",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 144,
+                "left": 0
+              }
+            }
+          ],
+          "outputHandles": [
+            {
+              "glbPosition": {
+                "x": 136,
+                "y": 224
+              },
+              "relPosition": {
+                "x": 216,
+                "y": 48
+              },
+              "id": "OUT",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 48,
+                "right": 0
+              }
+            }
+          ],
+          "inputConnector": {
+            "glbPosition": {
+              "x": -80,
+              "y": 224
+            },
+            "relPosition": {
+              "x": 0,
+              "y": 48
+            },
+            "id": "IN1",
+            "position": "left",
+            "type": "target",
+            "style": {
+              "top": 48,
+              "left": 0
+            }
+          },
+          "outputConnector": {
+            "glbPosition": {
+              "x": 136,
+              "y": 224
+            },
+            "relPosition": {
+              "x": 216,
+              "y": 48
+            },
+            "id": "OUT",
+            "position": "right",
+            "type": "source",
+            "style": {
+              "top": 48,
+              "right": 0
+            }
+          },
+          "numericId": "10284737",
+          "variant": {
+            "name": "ESP32_TASTER_SCHALTER",
+            "type": "function-block",
+            "variables": [
+              {
+                "name": "OUT",
+                "class": "output",
+                "type": {
+                  "definition": "base-type",
+                  "value": "BOOL"
+                }
+              },
+              {
+                "name": "IN1",
+                "class": "input",
+                "type": {
+                  "definition": "base-type",
+                  "value": "BOOL"
+                }
+              },
+              {
+                "name": "PB_SW",
+                "class": "input",
+                "type": {
+                  "definition": "base-type",
+                  "value": "BOOL"
+                }
+              },
+              {
+                "name": "NO_NC",
+                "class": "input",
+                "type": {
+                  "definition": "base-type",
+                  "value": "BOOL"
+                }
+              }
+            ],
+            "documentation": "PB_SW: 0=Taster, 1=Schalter;   NO_NC: 0=Schließer, 1=Öffner",
+            "extensible": false
+          },
+          "variable": {
+            "id": "ea0ed39e-0d9b-4872-9dbf-c54d9b52164a",
+            "name": "ESP32_TASTER_SCHALTER3",
+            "type": {
+              "definition": "derived",
+              "value": "ESP32_TASTER_SCHALTER"
+            },
+            "class": "local",
+            "location": "",
+            "documentation": "",
+            "debug": false
+          },
+          "executionOrder": 0,
+          "executionControl": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "width": 216,
+        "height": 168,
+        "measured": {
+          "width": 216,
+          "height": 168
+        },
+        "draggable": true,
+        "selectable": true,
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "BLOCK_4a98019f-8cc0-4c9b-9b2d-8216afe3707f",
+        "type": "block",
+        "position": {
+          "x": -240,
+          "y": -48
+        },
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": -64,
+                "y": 16
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 48
+              },
+              "id": "IN1",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 48,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": -64,
+                "y": 64
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 96
+              },
+              "id": "PB_SW",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 96,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": -64,
+                "y": 112
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 144
+              },
+              "id": "NO_NC",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 144,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 152,
+                "y": 16
+              },
+              "relPosition": {
+                "x": 216,
+                "y": 48
+              },
+              "id": "OUT",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 48,
+                "right": 0
+              }
+            }
+          ],
+          "inputHandles": [
+            {
+              "glbPosition": {
+                "x": -64,
+                "y": 16
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 48
+              },
+              "id": "IN1",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 48,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": -64,
+                "y": 64
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 96
+              },
+              "id": "PB_SW",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 96,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": -64,
+                "y": 112
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 144
+              },
+              "id": "NO_NC",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 144,
+                "left": 0
+              }
+            }
+          ],
+          "outputHandles": [
+            {
+              "glbPosition": {
+                "x": 152,
+                "y": 16
+              },
+              "relPosition": {
+                "x": 216,
+                "y": 48
+              },
+              "id": "OUT",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 48,
+                "right": 0
+              }
+            }
+          ],
+          "inputConnector": {
+            "glbPosition": {
+              "x": -64,
+              "y": 16
+            },
+            "relPosition": {
+              "x": 0,
+              "y": 48
+            },
+            "id": "IN1",
+            "position": "left",
+            "type": "target",
+            "style": {
+              "top": 48,
+              "left": 0
+            }
+          },
+          "outputConnector": {
+            "glbPosition": {
+              "x": 152,
+              "y": 16
+            },
+            "relPosition": {
+              "x": 216,
+              "y": 48
+            },
+            "id": "OUT",
+            "position": "right",
+            "type": "source",
+            "style": {
+              "top": 48,
+              "right": 0
+            }
+          },
+          "numericId": "2966069",
+          "variant": {
+            "name": "ESP32_TASTER_SCHALTER",
+            "type": "function-block",
+            "variables": [
+              {
+                "name": "OUT",
+                "class": "output",
+                "type": {
+                  "definition": "base-type",
+                  "value": "BOOL"
+                }
+              },
+              {
+                "name": "IN1",
+                "class": "input",
+                "type": {
+                  "definition": "base-type",
+                  "value": "BOOL"
+                }
+              },
+              {
+                "name": "PB_SW",
+                "class": "input",
+                "type": {
+                  "definition": "base-type",
+                  "value": "BOOL"
+                }
+              },
+              {
+                "name": "NO_NC",
+                "class": "input",
+                "type": {
+                  "definition": "base-type",
+                  "value": "BOOL"
+                }
+              }
+            ],
+            "documentation": "PB_SW: 0=Taster, 1=Schalter;   NO_NC: 0=Schließer, 1=Öffner",
+            "extensible": false
+          },
+          "variable": {
+            "id": "edbcab4c-ec88-4984-9e65-13adc1132697",
+            "name": "ESP32_TASTER_SCHALTER2",
+            "type": {
+              "definition": "derived",
+              "value": "ESP32_TASTER_SCHALTER"
+            },
+            "class": "local",
+            "location": "",
+            "documentation": "",
+            "debug": false
+          },
+          "executionOrder": 0,
+          "executionControl": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "width": 216,
+        "height": 168,
+        "measured": {
+          "width": 216,
+          "height": 168
+        },
+        "draggable": true,
+        "selectable": true,
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "BLOCK_fe0f67d0-ee50-4216-badb-ecad41ebbeac",
+        "type": "block",
+        "position": {
+          "x": -240,
+          "y": -240
+        },
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": -128,
+                "y": -144
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 48
+              },
+              "id": "IN1",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 48,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": -128,
+                "y": -96
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 96
+              },
+              "id": "PB_SW",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 96,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": -128,
+                "y": -48
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 144
+              },
+              "id": "NO_NC",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 144,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 88,
+                "y": -144
+              },
+              "relPosition": {
+                "x": 216,
+                "y": 48
+              },
+              "id": "OUT",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 48,
+                "right": 0
+              }
+            }
+          ],
+          "inputHandles": [
+            {
+              "glbPosition": {
+                "x": -128,
+                "y": -144
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 48
+              },
+              "id": "IN1",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 48,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": -128,
+                "y": -96
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 96
+              },
+              "id": "PB_SW",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 96,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": -128,
+                "y": -48
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 144
+              },
+              "id": "NO_NC",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 144,
+                "left": 0
+              }
+            }
+          ],
+          "outputHandles": [
+            {
+              "glbPosition": {
+                "x": 88,
+                "y": -144
+              },
+              "relPosition": {
+                "x": 216,
+                "y": 48
+              },
+              "id": "OUT",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 48,
+                "right": 0
+              }
+            }
+          ],
+          "inputConnector": {
+            "glbPosition": {
+              "x": -128,
+              "y": -144
+            },
+            "relPosition": {
+              "x": 0,
+              "y": 48
+            },
+            "id": "IN1",
+            "position": "left",
+            "type": "target",
+            "style": {
+              "top": 48,
+              "left": 0
+            }
+          },
+          "outputConnector": {
+            "glbPosition": {
+              "x": 88,
+              "y": -144
+            },
+            "relPosition": {
+              "x": 216,
+              "y": 48
+            },
+            "id": "OUT",
+            "position": "right",
+            "type": "source",
+            "style": {
+              "top": 48,
+              "right": 0
+            }
+          },
+          "numericId": "4175310",
+          "variant": {
+            "name": "ESP32_TASTER_SCHALTER",
+            "type": "function-block",
+            "variables": [
+              {
+                "name": "OUT",
+                "class": "output",
+                "type": {
+                  "definition": "base-type",
+                  "value": "BOOL"
+                }
+              },
+              {
+                "name": "IN1",
+                "class": "input",
+                "type": {
+                  "definition": "base-type",
+                  "value": "BOOL"
+                }
+              },
+              {
+                "name": "PB_SW",
+                "class": "input",
+                "type": {
+                  "definition": "base-type",
+                  "value": "BOOL"
+                }
+              },
+              {
+                "name": "NO_NC",
+                "class": "input",
+                "type": {
+                  "definition": "base-type",
+                  "value": "BOOL"
+                }
+              }
+            ],
+            "documentation": "PB_SW: 0=Taster, 1=Schalter;   NO_NC: 0=Schließer, 1=Öffner",
+            "extensible": false
+          },
+          "variable": {
+            "id": "7967ca7e-0219-4e90-b300-1bf10206ac26",
+            "name": "ESP32_TASTER_SCHALTER1",
+            "type": {
+              "definition": "derived",
+              "value": "ESP32_TASTER_SCHALTER"
+            },
+            "class": "local",
+            "location": "",
+            "documentation": "",
+            "debug": false
+          },
+          "executionOrder": 0,
+          "executionControl": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "width": 216,
+        "height": 168,
+        "measured": {
+          "width": 216,
+          "height": 168
+        },
+        "draggable": true,
+        "selectable": true,
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "INPUT-VARIABLE_b271a3d4-a2e1-49ba-896a-2eaecc9046fc",
+        "type": "input-variable",
+        "position": {
+          "x": 336,
+          "y": 480
+        },
+        "width": 64,
+        "height": 32,
+        "measured": {
+          "width": 64,
+          "height": 32
+        },
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": 512,
+                "y": 528
+              },
+              "relPosition": {
+                "x": 48,
+                "y": 16
+              },
+              "id": "output-variable",
+              "position": "right",
+              "type": "source"
+            }
+          ],
+          "inputHandles": [],
+          "outputHandles": [
+            {
+              "glbPosition": {
+                "x": 512,
+                "y": 528
+              },
+              "relPosition": {
+                "x": 48,
+                "y": 16
+              },
+              "id": "output-variable",
+              "position": "right",
+              "type": "source"
+            }
+          ],
+          "outputConnector": {
+            "glbPosition": {
+              "x": 512,
+              "y": 528
+            },
+            "relPosition": {
+              "x": 48,
+              "y": 16
+            },
+            "id": "output-variable",
+            "position": "right",
+            "type": "source"
+          },
+          "numericId": "1596760",
+          "variable": {
+            "id": "",
+            "name": "A2",
+            "type": {
+              "definition": "base-type",
+              "value": "UINT"
+            },
+            "class": "local",
+            "location": "",
+            "documentation": "",
+            "debug": false
+          },
+          "executionOrder": 0,
+          "variant": "input-variable",
+          "negated": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "deletable": true,
+        "selectable": true,
+        "draggable": true,
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "INPUT-VARIABLE_a517f9fd-f90e-49a4-898c-2e789821d5cd",
+        "type": "input-variable",
+        "position": {
+          "x": 336,
+          "y": 432
+        },
+        "width": 64,
+        "height": 32,
+        "measured": {
+          "width": 64,
+          "height": 32
+        },
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": 480,
+                "y": 448
+              },
+              "relPosition": {
+                "x": 48,
+                "y": 16
+              },
+              "id": "output-variable",
+              "position": "right",
+              "type": "source"
+            }
+          ],
+          "inputHandles": [],
+          "outputHandles": [
+            {
+              "glbPosition": {
+                "x": 480,
+                "y": 448
+              },
+              "relPosition": {
+                "x": 48,
+                "y": 16
+              },
+              "id": "output-variable",
+              "position": "right",
+              "type": "source"
+            }
+          ],
+          "outputConnector": {
+            "glbPosition": {
+              "x": 480,
+              "y": 448
+            },
+            "relPosition": {
+              "x": 48,
+              "y": 16
+            },
+            "id": "output-variable",
+            "position": "right",
+            "type": "source"
+          },
+          "numericId": "10428858",
+          "variable": {
+            "id": "",
+            "name": "A1",
+            "type": {
+              "definition": "base-type",
+              "value": "UINT"
+            },
+            "class": "local",
+            "location": "",
+            "documentation": "",
+            "debug": false
+          },
+          "executionOrder": 0,
+          "variant": "input-variable",
+          "negated": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "deletable": true,
+        "selectable": true,
+        "draggable": true,
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "INPUT-VARIABLE_bfe9770d-61cd-4e01-85cc-dc73995b497e",
+        "type": "input-variable",
+        "position": {
+          "x": 336,
+          "y": 384
+        },
+        "width": 64,
+        "height": 32,
+        "measured": {
+          "width": 64,
+          "height": 32
+        },
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": 496,
+                "y": 416
+              },
+              "relPosition": {
+                "x": 48,
+                "y": 16
+              },
+              "id": "output-variable",
+              "position": "right",
+              "type": "source"
+            }
+          ],
+          "inputHandles": [],
+          "outputHandles": [
+            {
+              "glbPosition": {
+                "x": 496,
+                "y": 416
+              },
+              "relPosition": {
+                "x": 48,
+                "y": 16
+              },
+              "id": "output-variable",
+              "position": "right",
+              "type": "source"
+            }
+          ],
+          "outputConnector": {
+            "glbPosition": {
+              "x": 496,
+              "y": 416
+            },
+            "relPosition": {
+              "x": 48,
+              "y": 16
+            },
+            "id": "output-variable",
+            "position": "right",
+            "type": "source"
+          },
+          "numericId": "3201713",
+          "variable": {
+            "id": "",
+            "name": "A0",
+            "type": {
+              "definition": "base-type",
+              "value": "UINT"
+            },
+            "class": "local",
+            "location": "",
+            "documentation": "",
+            "debug": false
+          },
+          "executionOrder": 0,
+          "variant": "input-variable",
+          "negated": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "deletable": true,
+        "selectable": true,
+        "draggable": true,
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "BLOCK_8141dff9-506d-41fb-90a6-f6355052f1e1",
+        "type": "block",
+        "position": {
+          "x": 1104,
+          "y": 608
+        },
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": 1008,
+                "y": 880
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 48
+              },
+              "id": "IN1",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 48,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 1008,
+                "y": 928
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 96
+              },
+              "id": "IN2",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 96,
+                "left": 0
+              }
+            }
+          ],
+          "inputHandles": [
+            {
+              "glbPosition": {
+                "x": 1008,
+                "y": 880
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 48
+              },
+              "id": "IN1",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 48,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 1008,
+                "y": 928
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 96
+              },
+              "id": "IN2",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 96,
+                "left": 0
+              }
+            }
+          ],
+          "outputHandles": [],
+          "inputConnector": {
+            "glbPosition": {
+              "x": 1008,
+              "y": 880
+            },
+            "relPosition": {
+              "x": 0,
+              "y": 48
+            },
+            "id": "IN1",
+            "position": "left",
+            "type": "target",
+            "style": {
+              "top": 48,
+              "left": 0
+            }
+          },
+          "numericId": "7865978",
+          "variant": {
+            "name": "ESP32_DAC",
+            "type": "function-block",
+            "variables": [
+              {
+                "name": "IN1",
+                "class": "input",
+                "type": {
+                  "definition": "base-type",
+                  "value": "USINT"
+                }
+              },
+              {
+                "name": "IN2",
+                "class": "input",
+                "type": {
+                  "definition": "base-type",
+                  "value": "USINT"
+                }
+              }
+            ],
+            "documentation": "Gibt eine Analoge Spannung (0...3,3V, bzw. 0...5V am CarrierBoard) an den Analogausgängen des ESP32 aus (Pin 25 und 26)",
+            "extensible": false
+          },
+          "variable": {
+            "id": "e166133d-079d-4f44-8e5a-6f4a989beb6a",
+            "name": "ESP32_DAC1",
+            "type": {
+              "definition": "derived",
+              "value": "ESP32_DAC"
+            },
+            "class": "local",
+            "location": "",
+            "documentation": "",
+            "debug": false
+          },
+          "executionOrder": 0,
+          "executionControl": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "width": 108,
+        "height": 120,
+        "measured": {
+          "width": 108,
+          "height": 120
+        },
+        "draggable": true,
+        "selectable": true,
+        "selected": false,
+        "dragging": false
+      }
+    ],
+    "edges": [
+      {
+        "type": "smoothstep",
+        "source": "BLOCK_c209bc95-2633-4a4c-8ae1-324c875425be",
+        "sourceHandle": "xOUT1",
+        "target": "BLOCK_3f3fb99a-378c-4bca-bd23-33246e0cf47e",
+        "targetHandle": "IN",
+        "id": "xy-edge__BLOCK_dab3145f-882e-49bd-9857-f49db21ad88exOUT1-BLOCK_3f3fb99a-378c-4bca-bd23-33246e0cf47eIN"
+      },
+      {
+        "type": "smoothstep",
+        "source": "BLOCK_3f3fb99a-378c-4bca-bd23-33246e0cf47e",
+        "sourceHandle": "OUT",
+        "target": "OUTPUT-VARIABLE_5efe3dc1-c835-4698-b2c1-5ad9ed97da68",
+        "targetHandle": "input-variable",
+        "id": "xy-edge__BLOCK_3f3fb99a-378c-4bca-bd23-33246e0cf47eOUT-OUTPUT-VARIABLE_5efe3dc1-c835-4698-b2c1-5ad9ed97da68input-variable"
+      },
+      {
+        "type": "smoothstep",
+        "source": "BLOCK_ed747525-5f47-47b1-bbcc-996602449514",
+        "sourceHandle": "OUT",
+        "target": "OUTPUT-VARIABLE_2000be77-1f65-4830-a3db-e59da7c4740c",
+        "targetHandle": "input-variable",
+        "id": "xy-edge_BLOCK_ed747525-5f47-47b1-bbcc-996602449514_OUTPUT-VARIABLE_2000be77-1f65-4830-a3db-e59da7c4740c__OUT_input-variable"
+      },
+      {
+        "type": "smoothstep",
+        "source": "BLOCK_c209bc95-2633-4a4c-8ae1-324c875425be",
+        "sourceHandle": "xOUT2",
+        "target": "BLOCK_ed747525-5f47-47b1-bbcc-996602449514",
+        "targetHandle": "IN",
+        "id": "xy-edge__BLOCK_5508929d-bcb1-49e1-be70-47f1aba579a7xOUT2-BLOCK_ed747525-5f47-47b1-bbcc-996602449514IN"
+      },
+      {
+        "type": "smoothstep",
+        "source": "BLOCK_c209bc95-2633-4a4c-8ae1-324c875425be",
+        "sourceHandle": "xOUT3",
+        "target": "BLOCK_42120c88-e194-41cf-ac2a-65e12a114958",
+        "targetHandle": "IN",
+        "id": "xy-edge__BLOCK_f1fa9a3c-2e1a-4853-8be0-c8bb74630c7axOUT3-BLOCK_42120c88-e194-41cf-ac2a-65e12a114958IN"
+      },
+      {
+        "type": "smoothstep",
+        "source": "BLOCK_c209bc95-2633-4a4c-8ae1-324c875425be",
+        "sourceHandle": "xOUT4",
+        "target": "BLOCK_1105847a-4e11-4294-b66f-9805e1c226d5",
+        "targetHandle": "IN",
+        "id": "xy-edge__BLOCK_f1fa9a3c-2e1a-4853-8be0-c8bb74630c7axOUT4-BLOCK_1105847a-4e11-4294-b66f-9805e1c226d5IN"
+      },
+      {
+        "type": "smoothstep",
+        "source": "BLOCK_c209bc95-2633-4a4c-8ae1-324c875425be",
+        "sourceHandle": "xOUT5",
+        "target": "BLOCK_70d313e1-cc1c-466a-9417-0c92a538c9a4",
+        "targetHandle": "IN",
+        "id": "xy-edge__BLOCK_f1fa9a3c-2e1a-4853-8be0-c8bb74630c7axOUT5-BLOCK_70d313e1-cc1c-466a-9417-0c92a538c9a4IN"
+      },
+      {
+        "type": "smoothstep",
+        "source": "BLOCK_c209bc95-2633-4a4c-8ae1-324c875425be",
+        "sourceHandle": "xOUT6",
+        "target": "BLOCK_d3498342-949a-4f19-8b5f-a640ba219a85",
+        "targetHandle": "IN",
+        "id": "xy-edge__BLOCK_f1fa9a3c-2e1a-4853-8be0-c8bb74630c7axOUT6-BLOCK_d3498342-949a-4f19-8b5f-a640ba219a85IN"
+      },
+      {
+        "type": "smoothstep",
+        "source": "BLOCK_c209bc95-2633-4a4c-8ae1-324c875425be",
+        "sourceHandle": "xOUT7",
+        "target": "BLOCK_31dfdd20-ef34-4bef-9686-5fd63c1ded45",
+        "targetHandle": "IN",
+        "id": "xy-edge__BLOCK_f1fa9a3c-2e1a-4853-8be0-c8bb74630c7axOUT7-BLOCK_31dfdd20-ef34-4bef-9686-5fd63c1ded45IN"
+      },
+      {
+        "type": "smoothstep",
+        "source": "BLOCK_1105847a-4e11-4294-b66f-9805e1c226d5",
+        "sourceHandle": "OUT",
+        "target": "OUTPUT-VARIABLE_e3214179-8dbd-4530-ae13-996e6eed4953",
+        "targetHandle": "input-variable",
+        "id": "xy-edge__BLOCK_1105847a-4e11-4294-b66f-9805e1c226d5OUT-OUTPUT-VARIABLE_e3214179-8dbd-4530-ae13-996e6eed4953input-variable"
+      },
+      {
+        "type": "smoothstep",
+        "source": "BLOCK_42120c88-e194-41cf-ac2a-65e12a114958",
+        "sourceHandle": "OUT",
+        "target": "OUTPUT-VARIABLE_c3066e8a-65d9-4676-b9fd-9624e93d3cfd",
+        "targetHandle": "input-variable",
+        "id": "xy-edge__BLOCK_42120c88-e194-41cf-ac2a-65e12a114958OUT-OUTPUT-VARIABLE_c3066e8a-65d9-4676-b9fd-9624e93d3cfdinput-variable"
+      },
+      {
+        "type": "smoothstep",
+        "source": "BLOCK_70d313e1-cc1c-466a-9417-0c92a538c9a4",
+        "sourceHandle": "OUT",
+        "target": "OUTPUT-VARIABLE_6f59abd0-afaa-46aa-bc2c-75ed75fe238d",
+        "targetHandle": "input-variable",
+        "id": "xy-edge__BLOCK_70d313e1-cc1c-466a-9417-0c92a538c9a4OUT-OUTPUT-VARIABLE_6f59abd0-afaa-46aa-bc2c-75ed75fe238dinput-variable"
+      },
+      {
+        "type": "smoothstep",
+        "source": "BLOCK_d3498342-949a-4f19-8b5f-a640ba219a85",
+        "sourceHandle": "OUT",
+        "target": "OUTPUT-VARIABLE_c898c688-aa12-40b8-ba2a-a8c530eb1098",
+        "targetHandle": "input-variable",
+        "id": "xy-edge__BLOCK_d3498342-949a-4f19-8b5f-a640ba219a85OUT-OUTPUT-VARIABLE_c898c688-aa12-40b8-ba2a-a8c530eb1098input-variable"
+      },
+      {
+        "type": "smoothstep",
+        "source": "BLOCK_31dfdd20-ef34-4bef-9686-5fd63c1ded45",
+        "sourceHandle": "OUT",
+        "target": "OUTPUT-VARIABLE_5c75919f-20cc-4135-91c5-54c23be40dc6",
+        "targetHandle": "input-variable",
+        "id": "xy-edge__BLOCK_31dfdd20-ef34-4bef-9686-5fd63c1ded45OUT-OUTPUT-VARIABLE_5c75919f-20cc-4135-91c5-54c23be40dc6input-variable"
+      },
+      {
+        "type": "smoothstep",
+        "source": "BLOCK_3ad87452-e85a-452d-9e4d-7bdb7c711e31",
+        "sourceHandle": "OUT",
+        "target": "OUTPUT-VARIABLE_a5b4f69e-7b57-40e8-866f-d2d327ae703c",
+        "targetHandle": "input-variable",
+        "id": "xy-edge_BLOCK_3ad87452-e85a-452d-9e4d-7bdb7c711e31_OUTPUT-VARIABLE_a5b4f69e-7b57-40e8-866f-d2d327ae703c__OUT_input-variable"
+      },
+      {
+        "type": "smoothstep",
+        "source": "BLOCK_c209bc95-2633-4a4c-8ae1-324c875425be",
+        "sourceHandle": "xOUT8",
+        "target": "BLOCK_3ad87452-e85a-452d-9e4d-7bdb7c711e31",
+        "targetHandle": "IN",
+        "id": "xy-edge__BLOCK_f1fa9a3c-2e1a-4853-8be0-c8bb74630c7axOUT8-BLOCK_3ad87452-e85a-452d-9e4d-7bdb7c711e31IN"
+      },
+      {
+        "type": "smoothstep",
+        "source": "INPUT-VARIABLE_cd409d60-8e88-4a8b-9c4d-0777991f565d",
+        "sourceHandle": "output-variable",
+        "target": "BLOCK_002e512e-64bd-4eb1-9f56-c7403ee12a7d",
+        "targetHandle": "IN1",
+        "id": "xy-edge__INPUT-VARIABLE_cd409d60-8e88-4a8b-9c4d-0777991f565doutput-variable-BLOCK_002e512e-64bd-4eb1-9f56-c7403ee12a7dIN1"
+      },
+      {
+        "type": "smoothstep",
+        "source": "INPUT-VARIABLE_504bf64a-5442-4788-a3ea-98c4bc41b9cc",
+        "sourceHandle": "output-variable",
+        "target": "BLOCK_002e512e-64bd-4eb1-9f56-c7403ee12a7d",
+        "targetHandle": "PB_SW",
+        "id": "xy-edge__INPUT-VARIABLE_504bf64a-5442-4788-a3ea-98c4bc41b9ccoutput-variable-BLOCK_002e512e-64bd-4eb1-9f56-c7403ee12a7dPB_SW"
+      },
+      {
+        "type": "smoothstep",
+        "source": "INPUT-VARIABLE_1f388ecd-8f15-402b-a393-8c5ae7065894",
+        "sourceHandle": "output-variable",
+        "target": "BLOCK_002e512e-64bd-4eb1-9f56-c7403ee12a7d",
+        "targetHandle": "NO_NC",
+        "id": "xy-edge__INPUT-VARIABLE_1f388ecd-8f15-402b-a393-8c5ae7065894output-variable-BLOCK_002e512e-64bd-4eb1-9f56-c7403ee12a7dNO_NC"
+      },
+      {
+        "type": "smoothstep",
+        "source": "BLOCK_002e512e-64bd-4eb1-9f56-c7403ee12a7d",
+        "sourceHandle": "OUT",
+        "target": "BLOCK_c209bc95-2633-4a4c-8ae1-324c875425be",
+        "targetHandle": "xIN4",
+        "id": "xy-edge__BLOCK_002e512e-64bd-4eb1-9f56-c7403ee12a7dOUT-BLOCK_7d125d4f-d5a9-4ec5-a398-3c40db9d9343xIN4"
+      },
+      {
+        "type": "smoothstep",
+        "source": "INPUT-VARIABLE_60110ff8-f624-45ef-aa6d-94dfe2e77387",
+        "sourceHandle": "output-variable",
+        "target": "BLOCK_fe0f67d0-ee50-4216-badb-ecad41ebbeac",
+        "targetHandle": "IN1",
+        "id": "xy-edge__INPUT-VARIABLE_60110ff8-f624-45ef-aa6d-94dfe2e77387output-variable-BLOCK_fe0f67d0-ee50-4216-badb-ecad41ebbeacIN1"
+      },
+      {
+        "type": "smoothstep",
+        "source": "INPUT-VARIABLE_62201cb2-23ef-47fe-816c-3c4198f4e668",
+        "sourceHandle": "output-variable",
+        "target": "BLOCK_fe0f67d0-ee50-4216-badb-ecad41ebbeac",
+        "targetHandle": "PB_SW",
+        "id": "xy-edge__INPUT-VARIABLE_62201cb2-23ef-47fe-816c-3c4198f4e668output-variable-BLOCK_fe0f67d0-ee50-4216-badb-ecad41ebbeacPB_SW"
+      },
+      {
+        "type": "smoothstep",
+        "source": "INPUT-VARIABLE_3d890a7c-2fc0-41f4-8f4b-581cd32fef24",
+        "sourceHandle": "output-variable",
+        "target": "BLOCK_fe0f67d0-ee50-4216-badb-ecad41ebbeac",
+        "targetHandle": "NO_NC",
+        "id": "xy-edge__INPUT-VARIABLE_3d890a7c-2fc0-41f4-8f4b-581cd32fef24output-variable-BLOCK_fe0f67d0-ee50-4216-badb-ecad41ebbeacNO_NC"
+      },
+      {
+        "type": "smoothstep",
+        "source": "INPUT-VARIABLE_6813f609-ecd6-4f50-8843-3f2ed50ab1c3",
+        "sourceHandle": "output-variable",
+        "target": "BLOCK_4a98019f-8cc0-4c9b-9b2d-8216afe3707f",
+        "targetHandle": "IN1",
+        "id": "xy-edge__INPUT-VARIABLE_6813f609-ecd6-4f50-8843-3f2ed50ab1c3output-variable-BLOCK_4a98019f-8cc0-4c9b-9b2d-8216afe3707fIN1"
+      },
+      {
+        "type": "smoothstep",
+        "source": "INPUT-VARIABLE_bd984227-94b8-4e97-8295-97a1c15ba36d",
+        "sourceHandle": "output-variable",
+        "target": "BLOCK_4a98019f-8cc0-4c9b-9b2d-8216afe3707f",
+        "targetHandle": "PB_SW",
+        "id": "xy-edge__INPUT-VARIABLE_bd984227-94b8-4e97-8295-97a1c15ba36doutput-variable-BLOCK_4a98019f-8cc0-4c9b-9b2d-8216afe3707fPB_SW"
+      },
+      {
+        "type": "smoothstep",
+        "source": "INPUT-VARIABLE_a9ba7c01-bfa1-4364-9f0c-0cd7bf40c32c",
+        "sourceHandle": "output-variable",
+        "target": "BLOCK_4a98019f-8cc0-4c9b-9b2d-8216afe3707f",
+        "targetHandle": "NO_NC",
+        "id": "xy-edge__INPUT-VARIABLE_a9ba7c01-bfa1-4364-9f0c-0cd7bf40c32coutput-variable-BLOCK_4a98019f-8cc0-4c9b-9b2d-8216afe3707fNO_NC"
+      },
+      {
+        "type": "smoothstep",
+        "source": "INPUT-VARIABLE_79cca250-a2b0-4037-8cf8-3cc3db3b1b8e",
+        "sourceHandle": "output-variable",
+        "target": "BLOCK_605d39fb-310f-4c94-bf2a-1427aed0d990",
+        "targetHandle": "IN1",
+        "id": "xy-edge__INPUT-VARIABLE_79cca250-a2b0-4037-8cf8-3cc3db3b1b8eoutput-variable-BLOCK_605d39fb-310f-4c94-bf2a-1427aed0d990IN1"
+      },
+      {
+        "type": "smoothstep",
+        "source": "INPUT-VARIABLE_c4db4a9a-2d02-4786-a213-4212fafd6eb6",
+        "sourceHandle": "output-variable",
+        "target": "BLOCK_605d39fb-310f-4c94-bf2a-1427aed0d990",
+        "targetHandle": "PB_SW",
+        "id": "xy-edge__INPUT-VARIABLE_c4db4a9a-2d02-4786-a213-4212fafd6eb6output-variable-BLOCK_605d39fb-310f-4c94-bf2a-1427aed0d990PB_SW"
+      },
+      {
+        "type": "smoothstep",
+        "source": "INPUT-VARIABLE_66f8fc80-6780-40ec-b6bd-6eef50b39ccf",
+        "sourceHandle": "output-variable",
+        "target": "BLOCK_605d39fb-310f-4c94-bf2a-1427aed0d990",
+        "targetHandle": "NO_NC",
+        "id": "xy-edge__INPUT-VARIABLE_66f8fc80-6780-40ec-b6bd-6eef50b39ccfoutput-variable-BLOCK_605d39fb-310f-4c94-bf2a-1427aed0d990NO_NC"
+      },
+      {
+        "type": "smoothstep",
+        "source": "BLOCK_605d39fb-310f-4c94-bf2a-1427aed0d990",
+        "sourceHandle": "OUT",
+        "target": "BLOCK_c209bc95-2633-4a4c-8ae1-324c875425be",
+        "targetHandle": "xIN3",
+        "id": "xy-edge__BLOCK_605d39fb-310f-4c94-bf2a-1427aed0d990OUT-BLOCK_7d125d4f-d5a9-4ec5-a398-3c40db9d9343xIN3"
+      },
+      {
+        "type": "smoothstep",
+        "source": "BLOCK_4a98019f-8cc0-4c9b-9b2d-8216afe3707f",
+        "sourceHandle": "OUT",
+        "target": "BLOCK_c209bc95-2633-4a4c-8ae1-324c875425be",
+        "targetHandle": "xIN2",
+        "id": "xy-edge__BLOCK_4a98019f-8cc0-4c9b-9b2d-8216afe3707fOUT-BLOCK_7d125d4f-d5a9-4ec5-a398-3c40db9d9343xIN2"
+      },
+      {
+        "type": "smoothstep",
+        "source": "BLOCK_fe0f67d0-ee50-4216-badb-ecad41ebbeac",
+        "sourceHandle": "OUT",
+        "target": "BLOCK_c209bc95-2633-4a4c-8ae1-324c875425be",
+        "targetHandle": "xIN1",
+        "id": "xy-edge__BLOCK_fe0f67d0-ee50-4216-badb-ecad41ebbeacOUT-BLOCK_7d125d4f-d5a9-4ec5-a398-3c40db9d9343xIN1"
+      },
+      {
+        "type": "smoothstep",
+        "source": "BLOCK_c209bc95-2633-4a4c-8ae1-324c875425be",
+        "sourceHandle": "iDAC1",
+        "target": "BLOCK_8141dff9-506d-41fb-90a6-f6355052f1e1",
+        "targetHandle": "IN1",
+        "id": "xy-edge__BLOCK_03317edb-726e-42f1-a3df-6e0a6d6aafc9iDAC1-BLOCK_8141dff9-506d-41fb-90a6-f6355052f1e1IN1"
+      },
+      {
+        "type": "smoothstep",
+        "source": "BLOCK_c209bc95-2633-4a4c-8ae1-324c875425be",
+        "sourceHandle": "iDAC2",
+        "target": "BLOCK_8141dff9-506d-41fb-90a6-f6355052f1e1",
+        "targetHandle": "IN2",
+        "id": "xy-edge__BLOCK_03317edb-726e-42f1-a3df-6e0a6d6aafc9iDAC2-BLOCK_8141dff9-506d-41fb-90a6-f6355052f1e1IN2"
+      },
+      {
+        "type": "smoothstep",
+        "source": "INPUT-VARIABLE_bfe9770d-61cd-4e01-85cc-dc73995b497e",
+        "sourceHandle": "output-variable",
+        "target": "BLOCK_c209bc95-2633-4a4c-8ae1-324c875425be",
+        "targetHandle": "iADC0",
+        "id": "xy-edge__INPUT-VARIABLE_bfe9770d-61cd-4e01-85cc-dc73995b497eoutput-variable-BLOCK_4b04c484-688b-4d13-95c0-7a4b1780294biADC0"
+      },
+      {
+        "type": "smoothstep",
+        "source": "INPUT-VARIABLE_a517f9fd-f90e-49a4-898c-2e789821d5cd",
+        "sourceHandle": "output-variable",
+        "target": "BLOCK_c209bc95-2633-4a4c-8ae1-324c875425be",
+        "targetHandle": "iADC1",
+        "id": "xy-edge__INPUT-VARIABLE_a517f9fd-f90e-49a4-898c-2e789821d5cdoutput-variable-BLOCK_4b04c484-688b-4d13-95c0-7a4b1780294biADC1"
+      },
+      {
+        "type": "smoothstep",
+        "source": "INPUT-VARIABLE_b271a3d4-a2e1-49ba-896a-2eaecc9046fc",
+        "sourceHandle": "output-variable",
+        "target": "BLOCK_c209bc95-2633-4a4c-8ae1-324c875425be",
+        "targetHandle": "iADC2",
+        "id": "xy-edge__INPUT-VARIABLE_b271a3d4-a2e1-49ba-896a-2eaecc9046fcoutput-variable-BLOCK_4b04c484-688b-4d13-95c0-7a4b1780294biADC2"
+      },
+      {
+        "type": "smoothstep",
+        "source": "INPUT-VARIABLE_92aa69fe-978d-4b7c-8c0b-7ea0e9a237b9",
+        "sourceHandle": "output-variable",
+        "target": "BLOCK_c209bc95-2633-4a4c-8ae1-324c875425be",
+        "targetHandle": "iADC3",
+        "id": "xy-edge__INPUT-VARIABLE_92aa69fe-978d-4b7c-8c0b-7ea0e9a237b9output-variable-BLOCK_4b04c484-688b-4d13-95c0-7a4b1780294biADC3"
+      }
+    ],
+    "selectedNodes": []
+  }
+}
+END_PROGRAM

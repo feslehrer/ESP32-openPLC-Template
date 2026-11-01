@@ -1,0 +1,39 @@
+{
+  "pouOffsets": {
+    "ESP32_LM75": {
+      "kind": "FUNCTION_BLOCK",
+      "startLine": 1,
+      "endLine": 24
+    },
+    "ESP32_DISPLAY": {
+      "kind": "FUNCTION_BLOCK",
+      "startLine": 26,
+      "endLine": 49
+    },
+    "ESP32_PWM": {
+      "kind": "FUNCTION_BLOCK",
+      "startLine": 51,
+      "endLine": 74
+    },
+    "ESP32_TONE": {
+      "kind": "FUNCTION_BLOCK",
+      "startLine": 76,
+      "endLine": 101
+    },
+    "MeineSteuerung": {
+      "kind": "FUNCTION_BLOCK",
+      "startLine": 103,
+      "endLine": 149
+    },
+    "ESP32_DAC": {
+      "kind": "FUNCTION_BLOCK",
+      "startLine": 151,
+      "endLine": 174
+    },
+    "main": {
+      "kind": "PROGRAM",
+      "startLine": 176,
+      "endLine": 236
+    }
+  }
+}

@@ -1,0 +1,702 @@
+{
+  "version": 2,
+  "md5": "59bdced594001525b5e31e886af675f9",
+  "typeTags": {
+    "BOOL": 0,
+    "SINT": 1,
+    "USINT": 2,
+    "INT": 3,
+    "UINT": 4,
+    "DINT": 5,
+    "UDINT": 6,
+    "LINT": 7,
+    "ULINT": 8,
+    "REAL": 9,
+    "LREAL": 10,
+    "BYTE": 11,
+    "WORD": 12,
+    "DWORD": 13,
+    "LWORD": 14,
+    "TIME": 15,
+    "DATE": 16,
+    "TOD": 17,
+    "DT": 18,
+    "STRING": 19,
+    "WSTRING": 20
+  },
+  "arrays": [
+    {
+      "index": 0,
+      "count": 30
+    },
+    {
+      "index": 1,
+      "count": 63
+    }
+  ],
+  "leaves": [
+    {
+      "arrayIdx": 0,
+      "elemIdx": 0,
+      "path": "S1",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 0,
+      "elemIdx": 1,
+      "path": "S2",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 0,
+      "elemIdx": 2,
+      "path": "S3",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 0,
+      "elemIdx": 3,
+      "path": "S4",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 0,
+      "elemIdx": 4,
+      "path": "LED1",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 0,
+      "elemIdx": 5,
+      "path": "LED2",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 0,
+      "elemIdx": 6,
+      "path": "LED3",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 0,
+      "elemIdx": 7,
+      "path": "LED4",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 0,
+      "elemIdx": 8,
+      "path": "LED5",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 0,
+      "elemIdx": 9,
+      "path": "LED6",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 0,
+      "elemIdx": 10,
+      "path": "LED7",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 0,
+      "elemIdx": 11,
+      "path": "LED8",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 0,
+      "elemIdx": 12,
+      "path": "A3",
+      "type": "UINT",
+      "size": 2
+    },
+    {
+      "arrayIdx": 0,
+      "elemIdx": 13,
+      "path": "A2",
+      "type": "UINT",
+      "size": 2
+    },
+    {
+      "arrayIdx": 0,
+      "elemIdx": 14,
+      "path": "A1",
+      "type": "UINT",
+      "size": 2
+    },
+    {
+      "arrayIdx": 0,
+      "elemIdx": 15,
+      "path": "A0",
+      "type": "UINT",
+      "size": 2
+    },
+    {
+      "arrayIdx": 0,
+      "elemIdx": 16,
+      "path": "DAC1",
+      "type": "UINT",
+      "size": 2
+    },
+    {
+      "arrayIdx": 0,
+      "elemIdx": 17,
+      "path": "DAC2",
+      "type": "UINT",
+      "size": 2
+    },
+    {
+      "arrayIdx": 0,
+      "elemIdx": 18,
+      "path": "NOTE_C",
+      "type": "INT",
+      "size": 2,
+      "readOnly": true
+    },
+    {
+      "arrayIdx": 0,
+      "elemIdx": 19,
+      "path": "NOTE_CS",
+      "type": "INT",
+      "size": 2,
+      "readOnly": true
+    },
+    {
+      "arrayIdx": 0,
+      "elemIdx": 20,
+      "path": "NOTE_D",
+      "type": "INT",
+      "size": 2,
+      "readOnly": true
+    },
+    {
+      "arrayIdx": 0,
+      "elemIdx": 21,
+      "path": "NOTE_EB",
+      "type": "INT",
+      "size": 2,
+      "readOnly": true
+    },
+    {
+      "arrayIdx": 0,
+      "elemIdx": 22,
+      "path": "NOTE_E",
+      "type": "INT",
+      "size": 2,
+      "readOnly": true
+    },
+    {
+      "arrayIdx": 0,
+      "elemIdx": 23,
+      "path": "NOTE_F",
+      "type": "INT",
+      "size": 2,
+      "readOnly": true
+    },
+    {
+      "arrayIdx": 0,
+      "elemIdx": 24,
+      "path": "NOTE_FS",
+      "type": "INT",
+      "size": 2,
+      "readOnly": true
+    },
+    {
+      "arrayIdx": 0,
+      "elemIdx": 25,
+      "path": "NOTE_G",
+      "type": "INT",
+      "size": 2,
+      "readOnly": true
+    },
+    {
+      "arrayIdx": 0,
+      "elemIdx": 26,
+      "path": "NOTE_GS",
+      "type": "INT",
+      "size": 2,
+      "readOnly": true
+    },
+    {
+      "arrayIdx": 0,
+      "elemIdx": 27,
+      "path": "NOTE_A",
+      "type": "INT",
+      "size": 2,
+      "readOnly": true
+    },
+    {
+      "arrayIdx": 0,
+      "elemIdx": 28,
+      "path": "NOTE_BB",
+      "type": "INT",
+      "size": 2,
+      "readOnly": true
+    },
+    {
+      "arrayIdx": 0,
+      "elemIdx": 29,
+      "path": "NOTE_B",
+      "type": "INT",
+      "size": 2,
+      "readOnly": true
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 0,
+      "path": "INSTANCE0.MEINESTEUERUNG0.ESP32_LM9.FTEMPERATURE",
+      "type": "REAL",
+      "size": 4
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 1,
+      "path": "INSTANCE0.MEINESTEUERUNG0.ESP32_LM9.STEMPERATURE",
+      "type": "STRING",
+      "size": 127
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 2,
+      "path": "INSTANCE0.MEINESTEUERUNG0.ESP32_LM9.HASBEENINITIALIZED",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 3,
+      "path": "INSTANCE0.MEINESTEUERUNG0.ESP32_DISPLAY6.TEXTZEILE1",
+      "type": "STRING",
+      "size": 127
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 4,
+      "path": "INSTANCE0.MEINESTEUERUNG0.ESP32_DISPLAY6.TEXTZEILE2",
+      "type": "STRING",
+      "size": 127
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 5,
+      "path": "INSTANCE0.MEINESTEUERUNG0.ESP32_DISPLAY6.HASBEENINITIALIZED",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 6,
+      "path": "INSTANCE0.MEINESTEUERUNG0.ESP32_PWM4.PINNR",
+      "type": "UINT",
+      "size": 2
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 7,
+      "path": "INSTANCE0.MEINESTEUERUNG0.ESP32_PWM4.IDUTYCYCLE",
+      "type": "UINT",
+      "size": 2
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 8,
+      "path": "INSTANCE0.MEINESTEUERUNG0.ESP32_PWM4.HASBEENINITIALIZED",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 9,
+      "path": "INSTANCE0.MEINESTEUERUNG0.ESP32_TONE0.IOKTAVE",
+      "type": "INT",
+      "size": 2
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 10,
+      "path": "INSTANCE0.MEINESTEUERUNG0.ESP32_TONE0.INOTE",
+      "type": "INT",
+      "size": 2
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 11,
+      "path": "INSTANCE0.MEINESTEUERUNG0.ESP32_TONE0.XNOTEON",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 12,
+      "path": "INSTANCE0.MEINESTEUERUNG0.ESP32_TONE0.HASBEENINITIALIZED",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 13,
+      "path": "INSTANCE0.MEINESTEUERUNG0.NOTE_D0",
+      "type": "DINT",
+      "size": 4
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 14,
+      "path": "INSTANCE0.MEINESTEUERUNG0.ESP32_TONE1.IOKTAVE",
+      "type": "INT",
+      "size": 2
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 15,
+      "path": "INSTANCE0.MEINESTEUERUNG0.ESP32_TONE1.INOTE",
+      "type": "INT",
+      "size": 2
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 16,
+      "path": "INSTANCE0.MEINESTEUERUNG0.ESP32_TONE1.XNOTEON",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 17,
+      "path": "INSTANCE0.MEINESTEUERUNG0.ESP32_TONE1.HASBEENINITIALIZED",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 18,
+      "path": "INSTANCE0.MEINESTEUERUNG0.XOUT1",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 19,
+      "path": "INSTANCE0.MEINESTEUERUNG0.XOUT2",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 20,
+      "path": "INSTANCE0.MEINESTEUERUNG0.XOUT3",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 21,
+      "path": "INSTANCE0.MEINESTEUERUNG0.XOUT4",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 22,
+      "path": "INSTANCE0.MEINESTEUERUNG0.XOUT5",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 23,
+      "path": "INSTANCE0.MEINESTEUERUNG0.XOUT6",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 24,
+      "path": "INSTANCE0.MEINESTEUERUNG0.XOUT7",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 25,
+      "path": "INSTANCE0.MEINESTEUERUNG0.XOUT8",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 26,
+      "path": "INSTANCE0.MEINESTEUERUNG0.IDAC1",
+      "type": "USINT",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 27,
+      "path": "INSTANCE0.MEINESTEUERUNG0.IDAC2",
+      "type": "USINT",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 28,
+      "path": "INSTANCE0.MEINESTEUERUNG0.XIN1",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 29,
+      "path": "INSTANCE0.MEINESTEUERUNG0.XIN2",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 30,
+      "path": "INSTANCE0.MEINESTEUERUNG0.XIN3",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 31,
+      "path": "INSTANCE0.MEINESTEUERUNG0.XIN4",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 32,
+      "path": "INSTANCE0.MEINESTEUERUNG0.IADC0",
+      "type": "UINT",
+      "size": 2
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 33,
+      "path": "INSTANCE0.MEINESTEUERUNG0.IADC1",
+      "type": "UINT",
+      "size": 2
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 34,
+      "path": "INSTANCE0.MEINESTEUERUNG0.IADC2",
+      "type": "UINT",
+      "size": 2
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 35,
+      "path": "INSTANCE0.MEINESTEUERUNG0.IADC3",
+      "type": "UINT",
+      "size": 2
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 36,
+      "path": "INSTANCE0.ESP32_TASTER_SCHALTER1.IN1",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 37,
+      "path": "INSTANCE0.ESP32_TASTER_SCHALTER1.PB_SW",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 38,
+      "path": "INSTANCE0.ESP32_TASTER_SCHALTER1.NO_NC",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 39,
+      "path": "INSTANCE0.ESP32_TASTER_SCHALTER1.OUT",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 40,
+      "path": "INSTANCE0.ESP32_TASTER_SCHALTER2.IN1",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 41,
+      "path": "INSTANCE0.ESP32_TASTER_SCHALTER2.PB_SW",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 42,
+      "path": "INSTANCE0.ESP32_TASTER_SCHALTER2.NO_NC",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 43,
+      "path": "INSTANCE0.ESP32_TASTER_SCHALTER2.OUT",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 44,
+      "path": "INSTANCE0.ESP32_TASTER_SCHALTER3.IN1",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 45,
+      "path": "INSTANCE0.ESP32_TASTER_SCHALTER3.PB_SW",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 46,
+      "path": "INSTANCE0.ESP32_TASTER_SCHALTER3.NO_NC",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 47,
+      "path": "INSTANCE0.ESP32_TASTER_SCHALTER3.OUT",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 48,
+      "path": "INSTANCE0.ESP32_TASTER_SCHALTER4.IN1",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 49,
+      "path": "INSTANCE0.ESP32_TASTER_SCHALTER4.PB_SW",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 50,
+      "path": "INSTANCE0.ESP32_TASTER_SCHALTER4.NO_NC",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 51,
+      "path": "INSTANCE0.ESP32_TASTER_SCHALTER4.OUT",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 52,
+      "path": "INSTANCE0.ESP32_DAC1.IN1",
+      "type": "USINT",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 53,
+      "path": "INSTANCE0.ESP32_DAC1.IN2",
+      "type": "USINT",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 54,
+      "path": "INSTANCE0.ESP32_DAC1.HASBEENINITIALIZED",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 55,
+      "path": "INSTANCE0._TMP_NOT5514717_OUT",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 56,
+      "path": "INSTANCE0._TMP_NOT5486747_OUT",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 57,
+      "path": "INSTANCE0._TMP_NOT9561958_OUT",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 58,
+      "path": "INSTANCE0._TMP_NOT661033_OUT",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 59,
+      "path": "INSTANCE0._TMP_NOT2924779_OUT",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 60,
+      "path": "INSTANCE0._TMP_NOT2377202_OUT",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 61,
+      "path": "INSTANCE0._TMP_NOT2716028_OUT",
+      "type": "BOOL",
+      "size": 1
+    },
+    {
+      "arrayIdx": 1,
+      "elemIdx": 62,
+      "path": "INSTANCE0._TMP_NOT5829797_OUT",
+      "type": "BOOL",
+      "size": 1
+    }
+  ]
+}
