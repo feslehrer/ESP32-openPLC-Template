@@ -1,21 +1,15 @@
 FUNCTION_BLOCK MeineSteuerung
   VAR
-    ESP32_LM9 : ESP32_LM75;
-    ESP32_DISPLAY6 : ESP32_DISPLAY;
-    ESP32_PWM4 : ESP32_PWM;
-    ESP32_TONE0 : ESP32_TONE;
-    NOTE_D0 : dint;
-    ESP32_TONE1 : ESP32_TONE;
   END_VAR
   VAR_OUTPUT
-    xOUT1 : BOOL; (* LED0 *)
-    xOUT2 : BOOL; (* LED1 *)
-    xOUT3 : BOOL; (* LED2 *)
-    xOUT4 : BOOL; (* LED3 *)
-    xOUT5 : BOOL; (* LED4 *)
-    xOUT6 : BOOL; (* LED5 *)
-    xOUT7 : BOOL; (* LED6 *)
-    xOUT8 : BOOL; (* LED7 *)
+    xOUT1 : BOOL; (* LED0, a *)
+    xOUT2 : BOOL; (* LED1, b *)
+    xOUT3 : BOOL; (* LED2, c *)
+    xOUT4 : BOOL; (* LED3, d *)
+    xOUT5 : BOOL; (* LED4, e *)
+    xOUT6 : BOOL; (* LED5, f *)
+    xOUT7 : BOOL; (* LED6, g *)
+    xOUT8 : BOOL; (* LED7, dp *)
     iDAC1 : USINT; (* DAC1 *)
     iDAC2 : USINT; (* DAC2 *)
   END_VAR
@@ -24,6 +18,8 @@ FUNCTION_BLOCK MeineSteuerung
     xIN2 : BOOL; (* S2 *)
     xIN3 : BOOL; (* S3 *)
     xIN4 : BOOL; (* S4 *)
+    xIN5 : BOOL; (* B5 *)
+    xIN6 : BOOL; (* B6 *)
     iADC0 : UINT;
     iADC1 : UINT;
     iADC2 : UINT;

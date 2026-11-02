@@ -25,6 +25,18 @@
       "alias": "S4"
     },
     {
+      "pin": "36",
+      "pinType": "digitalInput",
+      "address": "%IX0.4",
+      "alias": "B5"
+    },
+    {
+      "pin": "39",
+      "pinType": "digitalInput",
+      "address": "%IX0.5",
+      "alias": "B6"
+    },
+    {
       "pin": "9",
       "pinType": "digitalOutput",
       "address": "%QX0.0",

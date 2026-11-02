@@ -70,6 +70,28 @@
             "debug": false
           },
           {
+            "name": "B5",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "%IX0.4",
+            "initialValue": null,
+            "documentation": "",
+            "debug": false
+          },
+          {
+            "name": "B6",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "%IX0.5",
+            "initialValue": null,
+            "documentation": "",
+            "debug": false
+          },
+          {
             "name": "LED1",
             "type": {
               "definition": "base-type",
@@ -389,6 +411,8 @@
           "xOUT8",
           "iDAC1",
           "xIN4",
+          "xIN5",
+          "xIN6",
           "iADC0",
           "iADC1",
           "iADC2",

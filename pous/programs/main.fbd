@@ -32,7 +32,7 @@ PROGRAM main
     "comment": "",
     "nodes": [
       {
-        "id": "BLOCK_c209bc95-2633-4a4c-8ae1-324c875425be",
+        "id": "BLOCK_9deede65-b641-4406-be2a-0ae2dda83296",
         "type": "block",
         "position": {
           "x": 496,
@@ -117,7 +117,7 @@ PROGRAM main
                 "x": 0,
                 "y": 240
               },
-              "id": "iADC0",
+              "id": "xIN5",
               "position": "left",
               "type": "target",
               "style": {
@@ -134,7 +134,7 @@ PROGRAM main
                 "x": 0,
                 "y": 288
               },
-              "id": "iADC1",
+              "id": "xIN6",
               "position": "left",
               "type": "target",
               "style": {
@@ -151,7 +151,7 @@ PROGRAM main
                 "x": 0,
                 "y": 336
               },
-              "id": "iADC2",
+              "id": "iADC0",
               "position": "left",
               "type": "target",
               "style": {
@@ -168,11 +168,45 @@ PROGRAM main
                 "x": 0,
                 "y": 384
               },
-              "id": "iADC3",
+              "id": "iADC1",
               "position": "left",
               "type": "target",
               "style": {
                 "top": 384,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 496,
+                "y": 592
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 432
+              },
+              "id": "iADC2",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 432,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 496,
+                "y": 640
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 480
+              },
+              "id": "iADC3",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 480,
                 "left": 0
               }
             },
@@ -425,7 +459,7 @@ PROGRAM main
                 "x": 0,
                 "y": 240
               },
-              "id": "iADC0",
+              "id": "xIN5",
               "position": "left",
               "type": "target",
               "style": {
@@ -442,7 +476,7 @@ PROGRAM main
                 "x": 0,
                 "y": 288
               },
-              "id": "iADC1",
+              "id": "xIN6",
               "position": "left",
               "type": "target",
               "style": {
@@ -459,7 +493,7 @@ PROGRAM main
                 "x": 0,
                 "y": 336
               },
-              "id": "iADC2",
+              "id": "iADC0",
               "position": "left",
               "type": "target",
               "style": {
@@ -476,11 +510,45 @@ PROGRAM main
                 "x": 0,
                 "y": 384
               },
-              "id": "iADC3",
+              "id": "iADC1",
               "position": "left",
               "type": "target",
               "style": {
                 "top": 384,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 496,
+                "y": 592
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 432
+              },
+              "id": "iADC2",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 432,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 496,
+                "y": 640
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 480
+              },
+              "id": "iADC3",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 480,
                 "left": 0
               }
             }
@@ -691,47 +759,11 @@ PROGRAM main
               "right": 0
             }
           },
-          "numericId": "1882590",
+          "numericId": "4815481",
           "variant": {
             "name": "MeineSteuerung",
             "type": "function-block",
             "variables": [
-              {
-                "name": "ESP32_LM9",
-                "class": "local",
-                "type": {
-                  "definition": "user-data-type",
-                  "value": "ESP32_LM75"
-                },
-                "location": "",
-                "initialValue": null,
-                "documentation": "",
-                "debug": false
-              },
-              {
-                "name": "ESP32_DISPLAY6",
-                "class": "local",
-                "type": {
-                  "definition": "user-data-type",
-                  "value": "ESP32_DISPLAY"
-                },
-                "location": "",
-                "initialValue": null,
-                "documentation": "",
-                "debug": false
-              },
-              {
-                "name": "ESP32_PWM4",
-                "class": "local",
-                "type": {
-                  "definition": "user-data-type",
-                  "value": "ESP32_PWM"
-                },
-                "location": "",
-                "initialValue": null,
-                "documentation": "",
-                "debug": false
-              },
               {
                 "name": "xOUT1",
                 "class": "output",
@@ -741,7 +773,7 @@ PROGRAM main
                 },
                 "location": "",
                 "initialValue": null,
-                "documentation": "LED0",
+                "documentation": "LED0, a",
                 "debug": false
               },
               {
@@ -753,7 +785,7 @@ PROGRAM main
                 },
                 "location": "",
                 "initialValue": null,
-                "documentation": "LED1",
+                "documentation": "LED1, b",
                 "debug": false
               },
               {
@@ -765,7 +797,7 @@ PROGRAM main
                 },
                 "location": "",
                 "initialValue": null,
-                "documentation": "LED2",
+                "documentation": "LED2, c",
                 "debug": false
               },
               {
@@ -777,7 +809,7 @@ PROGRAM main
                 },
                 "location": "",
                 "initialValue": null,
-                "documentation": "LED3",
+                "documentation": "LED3, d",
                 "debug": false
               },
               {
@@ -789,7 +821,7 @@ PROGRAM main
                 },
                 "location": "",
                 "initialValue": null,
-                "documentation": "LED4",
+                "documentation": "LED4, e",
                 "debug": false
               },
               {
@@ -801,7 +833,7 @@ PROGRAM main
                 },
                 "location": "",
                 "initialValue": null,
-                "documentation": "LED5",
+                "documentation": "LED5, f",
                 "debug": false
               },
               {
@@ -813,7 +845,7 @@ PROGRAM main
                 },
                 "location": "",
                 "initialValue": null,
-                "documentation": "LED6",
+                "documentation": "LED6, g",
                 "debug": false
               },
               {
@@ -825,7 +857,7 @@ PROGRAM main
                 },
                 "location": "",
                 "initialValue": null,
-                "documentation": "LED7",
+                "documentation": "LED7, dp",
                 "debug": true
               },
               {
@@ -898,7 +930,31 @@ PROGRAM main
                 "location": "",
                 "initialValue": null,
                 "documentation": "S4",
-                "debug": false
+                "debug": true
+              },
+              {
+                "name": "xIN5",
+                "class": "input",
+                "type": {
+                  "value": "BOOL",
+                  "definition": "base-type"
+                },
+                "location": "",
+                "initialValue": null,
+                "documentation": "B5",
+                "debug": true
+              },
+              {
+                "name": "xIN6",
+                "class": "input",
+                "type": {
+                  "value": "BOOL",
+                  "definition": "base-type"
+                },
+                "location": "",
+                "initialValue": null,
+                "documentation": "B6",
+                "debug": true
               },
               {
                 "name": "iADC0",
@@ -949,14 +1005,146 @@ PROGRAM main
                 "debug": true
               },
               {
-                "id": "4e35ea18-5d3b-463f-b5e6-ebc80a8754db",
-                "name": "ESP32_TONE0",
+                "name": "NOTE_C",
+                "class": "external",
                 "type": {
-                  "definition": "user-data-type",
-                  "value": "ESP32_TONE"
+                  "value": "INT",
+                  "definition": "base-type"
                 },
-                "class": "local",
                 "location": "",
+                "initialValue": null,
+                "documentation": "",
+                "debug": false
+              },
+              {
+                "name": "NOTE_Cs",
+                "class": "external",
+                "type": {
+                  "value": "INT",
+                  "definition": "base-type"
+                },
+                "location": "",
+                "initialValue": null,
+                "documentation": "",
+                "debug": false
+              },
+              {
+                "name": "NOTE_D",
+                "class": "external",
+                "type": {
+                  "value": "INT",
+                  "definition": "base-type"
+                },
+                "location": "",
+                "initialValue": null,
+                "documentation": "",
+                "debug": false
+              },
+              {
+                "name": "NOTE_Eb",
+                "class": "external",
+                "type": {
+                  "value": "INT",
+                  "definition": "base-type"
+                },
+                "location": "",
+                "initialValue": null,
+                "documentation": "",
+                "debug": false
+              },
+              {
+                "name": "NOTE_E",
+                "class": "external",
+                "type": {
+                  "value": "INT",
+                  "definition": "base-type"
+                },
+                "location": "",
+                "initialValue": null,
+                "documentation": "",
+                "debug": false
+              },
+              {
+                "name": "NOTE_F",
+                "class": "external",
+                "type": {
+                  "value": "INT",
+                  "definition": "base-type"
+                },
+                "location": "",
+                "initialValue": null,
+                "documentation": "",
+                "debug": false
+              },
+              {
+                "name": "NOTE_Fs",
+                "class": "external",
+                "type": {
+                  "value": "INT",
+                  "definition": "base-type"
+                },
+                "location": "",
+                "initialValue": null,
+                "documentation": "",
+                "debug": false
+              },
+              {
+                "name": "NOTE_G",
+                "class": "external",
+                "type": {
+                  "value": "INT",
+                  "definition": "base-type"
+                },
+                "location": "",
+                "initialValue": null,
+                "documentation": "",
+                "debug": false
+              },
+              {
+                "name": "NOTE_Gs",
+                "class": "external",
+                "type": {
+                  "value": "INT",
+                  "definition": "base-type"
+                },
+                "location": "",
+                "initialValue": null,
+                "documentation": "",
+                "debug": false
+              },
+              {
+                "name": "NOTE_A",
+                "class": "external",
+                "type": {
+                  "value": "INT",
+                  "definition": "base-type"
+                },
+                "location": "",
+                "initialValue": null,
+                "documentation": "",
+                "debug": false
+              },
+              {
+                "name": "NOTE_Bb",
+                "class": "external",
+                "type": {
+                  "value": "INT",
+                  "definition": "base-type"
+                },
+                "location": "",
+                "initialValue": null,
+                "documentation": "",
+                "debug": false
+              },
+              {
+                "name": "NOTE_B",
+                "class": "external",
+                "type": {
+                  "value": "INT",
+                  "definition": "base-type"
+                },
+                "location": "",
+                "initialValue": null,
                 "documentation": "",
                 "debug": false
               }
@@ -996,7 +1184,7 @@ PROGRAM main
         "type": "input-variable",
         "position": {
           "x": -416,
-          "y": -208
+          "y": -64
         },
         "width": 64,
         "height": 32,
@@ -3040,7 +3228,7 @@ PROGRAM main
         "type": "input-variable",
         "position": {
           "x": 336,
-          "y": 528
+          "y": 624
         },
         "width": 64,
         "height": 32,
@@ -3124,7 +3312,7 @@ PROGRAM main
         "type": "input-variable",
         "position": {
           "x": -352,
-          "y": -160
+          "y": -16
         },
         "width": 64,
         "height": 32,
@@ -3199,7 +3387,7 @@ PROGRAM main
         "type": "input-variable",
         "position": {
           "x": -352,
-          "y": -112
+          "y": 32
         },
         "width": 64,
         "height": 32,
@@ -3274,7 +3462,7 @@ PROGRAM main
         "type": "input-variable",
         "position": {
           "x": -416,
-          "y": -16
+          "y": 128
         },
         "width": 64,
         "height": 32,
@@ -3358,7 +3546,7 @@ PROGRAM main
         "type": "input-variable",
         "position": {
           "x": -352,
-          "y": 80
+          "y": 224
         },
         "width": 64,
         "height": 32,
@@ -3433,7 +3621,7 @@ PROGRAM main
         "type": "input-variable",
         "position": {
           "x": -352,
-          "y": 32
+          "y": 176
         },
         "width": 64,
         "height": 32,
@@ -3508,7 +3696,7 @@ PROGRAM main
         "type": "input-variable",
         "position": {
           "x": -416,
-          "y": 176
+          "y": 320
         },
         "width": 64,
         "height": 32,
@@ -3592,7 +3780,7 @@ PROGRAM main
         "type": "input-variable",
         "position": {
           "x": -352,
-          "y": 272
+          "y": 416
         },
         "width": 64,
         "height": 32,
@@ -3667,7 +3855,7 @@ PROGRAM main
         "type": "input-variable",
         "position": {
           "x": -352,
-          "y": 224
+          "y": 368
         },
         "width": 64,
         "height": 32,
@@ -3742,7 +3930,7 @@ PROGRAM main
         "type": "input-variable",
         "position": {
           "x": -416,
-          "y": 368
+          "y": 512
         },
         "width": 64,
         "height": 32,
@@ -3826,7 +4014,7 @@ PROGRAM main
         "type": "input-variable",
         "position": {
           "x": -352,
-          "y": 464
+          "y": 608
         },
         "width": 64,
         "height": 32,
@@ -3901,7 +4089,7 @@ PROGRAM main
         "type": "input-variable",
         "position": {
           "x": -352,
-          "y": 416
+          "y": 560
         },
         "width": 64,
         "height": 32,
@@ -3976,7 +4164,7 @@ PROGRAM main
         "type": "block",
         "position": {
           "x": -240,
-          "y": 336
+          "y": 480
         },
         "data": {
           "handles": [
@@ -4230,7 +4418,7 @@ PROGRAM main
         "type": "block",
         "position": {
           "x": -240,
-          "y": 144
+          "y": 288
         },
         "data": {
           "handles": [
@@ -4484,7 +4672,7 @@ PROGRAM main
         "type": "block",
         "position": {
           "x": -240,
-          "y": -48
+          "y": 96
         },
         "data": {
           "handles": [
@@ -4738,7 +4926,7 @@ PROGRAM main
         "type": "block",
         "position": {
           "x": -240,
-          "y": -240
+          "y": -96
         },
         "data": {
           "handles": [
@@ -4992,7 +5180,7 @@ PROGRAM main
         "type": "input-variable",
         "position": {
           "x": 336,
-          "y": 480
+          "y": 576
         },
         "width": 64,
         "height": 32,
@@ -5076,7 +5264,7 @@ PROGRAM main
         "type": "input-variable",
         "position": {
           "x": 336,
-          "y": 432
+          "y": 528
         },
         "width": 64,
         "height": 32,
@@ -5160,7 +5348,7 @@ PROGRAM main
         "type": "input-variable",
         "position": {
           "x": 336,
-          "y": 384
+          "y": 480
         },
         "width": 64,
         "height": 32,
@@ -5395,7 +5583,7 @@ PROGRAM main
     "edges": [
       {
         "type": "smoothstep",
-        "source": "BLOCK_c209bc95-2633-4a4c-8ae1-324c875425be",
+        "source": "BLOCK_9deede65-b641-4406-be2a-0ae2dda83296",
         "sourceHandle": "xOUT1",
         "target": "BLOCK_3f3fb99a-378c-4bca-bd23-33246e0cf47e",
         "targetHandle": "IN",
@@ -5419,7 +5607,7 @@ PROGRAM main
       },
       {
         "type": "smoothstep",
-        "source": "BLOCK_c209bc95-2633-4a4c-8ae1-324c875425be",
+        "source": "BLOCK_9deede65-b641-4406-be2a-0ae2dda83296",
         "sourceHandle": "xOUT2",
         "target": "BLOCK_ed747525-5f47-47b1-bbcc-996602449514",
         "targetHandle": "IN",
@@ -5427,7 +5615,7 @@ PROGRAM main
       },
       {
         "type": "smoothstep",
-        "source": "BLOCK_c209bc95-2633-4a4c-8ae1-324c875425be",
+        "source": "BLOCK_9deede65-b641-4406-be2a-0ae2dda83296",
         "sourceHandle": "xOUT3",
         "target": "BLOCK_42120c88-e194-41cf-ac2a-65e12a114958",
         "targetHandle": "IN",
@@ -5435,7 +5623,7 @@ PROGRAM main
       },
       {
         "type": "smoothstep",
-        "source": "BLOCK_c209bc95-2633-4a4c-8ae1-324c875425be",
+        "source": "BLOCK_9deede65-b641-4406-be2a-0ae2dda83296",
         "sourceHandle": "xOUT4",
         "target": "BLOCK_1105847a-4e11-4294-b66f-9805e1c226d5",
         "targetHandle": "IN",
@@ -5443,7 +5631,7 @@ PROGRAM main
       },
       {
         "type": "smoothstep",
-        "source": "BLOCK_c209bc95-2633-4a4c-8ae1-324c875425be",
+        "source": "BLOCK_9deede65-b641-4406-be2a-0ae2dda83296",
         "sourceHandle": "xOUT5",
         "target": "BLOCK_70d313e1-cc1c-466a-9417-0c92a538c9a4",
         "targetHandle": "IN",
@@ -5451,7 +5639,7 @@ PROGRAM main
       },
       {
         "type": "smoothstep",
-        "source": "BLOCK_c209bc95-2633-4a4c-8ae1-324c875425be",
+        "source": "BLOCK_9deede65-b641-4406-be2a-0ae2dda83296",
         "sourceHandle": "xOUT6",
         "target": "BLOCK_d3498342-949a-4f19-8b5f-a640ba219a85",
         "targetHandle": "IN",
@@ -5459,7 +5647,7 @@ PROGRAM main
       },
       {
         "type": "smoothstep",
-        "source": "BLOCK_c209bc95-2633-4a4c-8ae1-324c875425be",
+        "source": "BLOCK_9deede65-b641-4406-be2a-0ae2dda83296",
         "sourceHandle": "xOUT7",
         "target": "BLOCK_31dfdd20-ef34-4bef-9686-5fd63c1ded45",
         "targetHandle": "IN",
@@ -5515,7 +5703,7 @@ PROGRAM main
       },
       {
         "type": "smoothstep",
-        "source": "BLOCK_c209bc95-2633-4a4c-8ae1-324c875425be",
+        "source": "BLOCK_9deede65-b641-4406-be2a-0ae2dda83296",
         "sourceHandle": "xOUT8",
         "target": "BLOCK_3ad87452-e85a-452d-9e4d-7bdb7c711e31",
         "targetHandle": "IN",
@@ -5527,7 +5715,8 @@ PROGRAM main
         "sourceHandle": "output-variable",
         "target": "BLOCK_002e512e-64bd-4eb1-9f56-c7403ee12a7d",
         "targetHandle": "IN1",
-        "id": "xy-edge__INPUT-VARIABLE_cd409d60-8e88-4a8b-9c4d-0777991f565doutput-variable-BLOCK_002e512e-64bd-4eb1-9f56-c7403ee12a7dIN1"
+        "id": "xy-edge__INPUT-VARIABLE_cd409d60-8e88-4a8b-9c4d-0777991f565doutput-variable-BLOCK_002e512e-64bd-4eb1-9f56-c7403ee12a7dIN1",
+        "selected": false
       },
       {
         "type": "smoothstep",
@@ -5535,7 +5724,8 @@ PROGRAM main
         "sourceHandle": "output-variable",
         "target": "BLOCK_002e512e-64bd-4eb1-9f56-c7403ee12a7d",
         "targetHandle": "PB_SW",
-        "id": "xy-edge__INPUT-VARIABLE_504bf64a-5442-4788-a3ea-98c4bc41b9ccoutput-variable-BLOCK_002e512e-64bd-4eb1-9f56-c7403ee12a7dPB_SW"
+        "id": "xy-edge__INPUT-VARIABLE_504bf64a-5442-4788-a3ea-98c4bc41b9ccoutput-variable-BLOCK_002e512e-64bd-4eb1-9f56-c7403ee12a7dPB_SW",
+        "selected": false
       },
       {
         "type": "smoothstep",
@@ -5543,15 +5733,17 @@ PROGRAM main
         "sourceHandle": "output-variable",
         "target": "BLOCK_002e512e-64bd-4eb1-9f56-c7403ee12a7d",
         "targetHandle": "NO_NC",
-        "id": "xy-edge__INPUT-VARIABLE_1f388ecd-8f15-402b-a393-8c5ae7065894output-variable-BLOCK_002e512e-64bd-4eb1-9f56-c7403ee12a7dNO_NC"
+        "id": "xy-edge__INPUT-VARIABLE_1f388ecd-8f15-402b-a393-8c5ae7065894output-variable-BLOCK_002e512e-64bd-4eb1-9f56-c7403ee12a7dNO_NC",
+        "selected": false
       },
       {
         "type": "smoothstep",
         "source": "BLOCK_002e512e-64bd-4eb1-9f56-c7403ee12a7d",
         "sourceHandle": "OUT",
-        "target": "BLOCK_c209bc95-2633-4a4c-8ae1-324c875425be",
+        "target": "BLOCK_9deede65-b641-4406-be2a-0ae2dda83296",
         "targetHandle": "xIN4",
-        "id": "xy-edge__BLOCK_002e512e-64bd-4eb1-9f56-c7403ee12a7dOUT-BLOCK_7d125d4f-d5a9-4ec5-a398-3c40db9d9343xIN4"
+        "id": "xy-edge__BLOCK_002e512e-64bd-4eb1-9f56-c7403ee12a7dOUT-BLOCK_7d125d4f-d5a9-4ec5-a398-3c40db9d9343xIN4",
+        "selected": false
       },
       {
         "type": "smoothstep",
@@ -5559,7 +5751,8 @@ PROGRAM main
         "sourceHandle": "output-variable",
         "target": "BLOCK_fe0f67d0-ee50-4216-badb-ecad41ebbeac",
         "targetHandle": "IN1",
-        "id": "xy-edge__INPUT-VARIABLE_60110ff8-f624-45ef-aa6d-94dfe2e77387output-variable-BLOCK_fe0f67d0-ee50-4216-badb-ecad41ebbeacIN1"
+        "id": "xy-edge__INPUT-VARIABLE_60110ff8-f624-45ef-aa6d-94dfe2e77387output-variable-BLOCK_fe0f67d0-ee50-4216-badb-ecad41ebbeacIN1",
+        "selected": false
       },
       {
         "type": "smoothstep",
@@ -5567,7 +5760,8 @@ PROGRAM main
         "sourceHandle": "output-variable",
         "target": "BLOCK_fe0f67d0-ee50-4216-badb-ecad41ebbeac",
         "targetHandle": "PB_SW",
-        "id": "xy-edge__INPUT-VARIABLE_62201cb2-23ef-47fe-816c-3c4198f4e668output-variable-BLOCK_fe0f67d0-ee50-4216-badb-ecad41ebbeacPB_SW"
+        "id": "xy-edge__INPUT-VARIABLE_62201cb2-23ef-47fe-816c-3c4198f4e668output-variable-BLOCK_fe0f67d0-ee50-4216-badb-ecad41ebbeacPB_SW",
+        "selected": false
       },
       {
         "type": "smoothstep",
@@ -5575,7 +5769,8 @@ PROGRAM main
         "sourceHandle": "output-variable",
         "target": "BLOCK_fe0f67d0-ee50-4216-badb-ecad41ebbeac",
         "targetHandle": "NO_NC",
-        "id": "xy-edge__INPUT-VARIABLE_3d890a7c-2fc0-41f4-8f4b-581cd32fef24output-variable-BLOCK_fe0f67d0-ee50-4216-badb-ecad41ebbeacNO_NC"
+        "id": "xy-edge__INPUT-VARIABLE_3d890a7c-2fc0-41f4-8f4b-581cd32fef24output-variable-BLOCK_fe0f67d0-ee50-4216-badb-ecad41ebbeacNO_NC",
+        "selected": false
       },
       {
         "type": "smoothstep",
@@ -5583,7 +5778,8 @@ PROGRAM main
         "sourceHandle": "output-variable",
         "target": "BLOCK_4a98019f-8cc0-4c9b-9b2d-8216afe3707f",
         "targetHandle": "IN1",
-        "id": "xy-edge__INPUT-VARIABLE_6813f609-ecd6-4f50-8843-3f2ed50ab1c3output-variable-BLOCK_4a98019f-8cc0-4c9b-9b2d-8216afe3707fIN1"
+        "id": "xy-edge__INPUT-VARIABLE_6813f609-ecd6-4f50-8843-3f2ed50ab1c3output-variable-BLOCK_4a98019f-8cc0-4c9b-9b2d-8216afe3707fIN1",
+        "selected": false
       },
       {
         "type": "smoothstep",
@@ -5591,7 +5787,8 @@ PROGRAM main
         "sourceHandle": "output-variable",
         "target": "BLOCK_4a98019f-8cc0-4c9b-9b2d-8216afe3707f",
         "targetHandle": "PB_SW",
-        "id": "xy-edge__INPUT-VARIABLE_bd984227-94b8-4e97-8295-97a1c15ba36doutput-variable-BLOCK_4a98019f-8cc0-4c9b-9b2d-8216afe3707fPB_SW"
+        "id": "xy-edge__INPUT-VARIABLE_bd984227-94b8-4e97-8295-97a1c15ba36doutput-variable-BLOCK_4a98019f-8cc0-4c9b-9b2d-8216afe3707fPB_SW",
+        "selected": false
       },
       {
         "type": "smoothstep",
@@ -5599,7 +5796,8 @@ PROGRAM main
         "sourceHandle": "output-variable",
         "target": "BLOCK_4a98019f-8cc0-4c9b-9b2d-8216afe3707f",
         "targetHandle": "NO_NC",
-        "id": "xy-edge__INPUT-VARIABLE_a9ba7c01-bfa1-4364-9f0c-0cd7bf40c32coutput-variable-BLOCK_4a98019f-8cc0-4c9b-9b2d-8216afe3707fNO_NC"
+        "id": "xy-edge__INPUT-VARIABLE_a9ba7c01-bfa1-4364-9f0c-0cd7bf40c32coutput-variable-BLOCK_4a98019f-8cc0-4c9b-9b2d-8216afe3707fNO_NC",
+        "selected": false
       },
       {
         "type": "smoothstep",
@@ -5607,7 +5805,8 @@ PROGRAM main
         "sourceHandle": "output-variable",
         "target": "BLOCK_605d39fb-310f-4c94-bf2a-1427aed0d990",
         "targetHandle": "IN1",
-        "id": "xy-edge__INPUT-VARIABLE_79cca250-a2b0-4037-8cf8-3cc3db3b1b8eoutput-variable-BLOCK_605d39fb-310f-4c94-bf2a-1427aed0d990IN1"
+        "id": "xy-edge__INPUT-VARIABLE_79cca250-a2b0-4037-8cf8-3cc3db3b1b8eoutput-variable-BLOCK_605d39fb-310f-4c94-bf2a-1427aed0d990IN1",
+        "selected": false
       },
       {
         "type": "smoothstep",
@@ -5615,7 +5814,8 @@ PROGRAM main
         "sourceHandle": "output-variable",
         "target": "BLOCK_605d39fb-310f-4c94-bf2a-1427aed0d990",
         "targetHandle": "PB_SW",
-        "id": "xy-edge__INPUT-VARIABLE_c4db4a9a-2d02-4786-a213-4212fafd6eb6output-variable-BLOCK_605d39fb-310f-4c94-bf2a-1427aed0d990PB_SW"
+        "id": "xy-edge__INPUT-VARIABLE_c4db4a9a-2d02-4786-a213-4212fafd6eb6output-variable-BLOCK_605d39fb-310f-4c94-bf2a-1427aed0d990PB_SW",
+        "selected": false
       },
       {
         "type": "smoothstep",
@@ -5623,35 +5823,39 @@ PROGRAM main
         "sourceHandle": "output-variable",
         "target": "BLOCK_605d39fb-310f-4c94-bf2a-1427aed0d990",
         "targetHandle": "NO_NC",
-        "id": "xy-edge__INPUT-VARIABLE_66f8fc80-6780-40ec-b6bd-6eef50b39ccfoutput-variable-BLOCK_605d39fb-310f-4c94-bf2a-1427aed0d990NO_NC"
+        "id": "xy-edge__INPUT-VARIABLE_66f8fc80-6780-40ec-b6bd-6eef50b39ccfoutput-variable-BLOCK_605d39fb-310f-4c94-bf2a-1427aed0d990NO_NC",
+        "selected": false
       },
       {
         "type": "smoothstep",
         "source": "BLOCK_605d39fb-310f-4c94-bf2a-1427aed0d990",
         "sourceHandle": "OUT",
-        "target": "BLOCK_c209bc95-2633-4a4c-8ae1-324c875425be",
+        "target": "BLOCK_9deede65-b641-4406-be2a-0ae2dda83296",
         "targetHandle": "xIN3",
-        "id": "xy-edge__BLOCK_605d39fb-310f-4c94-bf2a-1427aed0d990OUT-BLOCK_7d125d4f-d5a9-4ec5-a398-3c40db9d9343xIN3"
+        "id": "xy-edge__BLOCK_605d39fb-310f-4c94-bf2a-1427aed0d990OUT-BLOCK_7d125d4f-d5a9-4ec5-a398-3c40db9d9343xIN3",
+        "selected": false
       },
       {
         "type": "smoothstep",
         "source": "BLOCK_4a98019f-8cc0-4c9b-9b2d-8216afe3707f",
         "sourceHandle": "OUT",
-        "target": "BLOCK_c209bc95-2633-4a4c-8ae1-324c875425be",
+        "target": "BLOCK_9deede65-b641-4406-be2a-0ae2dda83296",
         "targetHandle": "xIN2",
-        "id": "xy-edge__BLOCK_4a98019f-8cc0-4c9b-9b2d-8216afe3707fOUT-BLOCK_7d125d4f-d5a9-4ec5-a398-3c40db9d9343xIN2"
+        "id": "xy-edge__BLOCK_4a98019f-8cc0-4c9b-9b2d-8216afe3707fOUT-BLOCK_7d125d4f-d5a9-4ec5-a398-3c40db9d9343xIN2",
+        "selected": false
       },
       {
         "type": "smoothstep",
         "source": "BLOCK_fe0f67d0-ee50-4216-badb-ecad41ebbeac",
         "sourceHandle": "OUT",
-        "target": "BLOCK_c209bc95-2633-4a4c-8ae1-324c875425be",
+        "target": "BLOCK_9deede65-b641-4406-be2a-0ae2dda83296",
         "targetHandle": "xIN1",
-        "id": "xy-edge__BLOCK_fe0f67d0-ee50-4216-badb-ecad41ebbeacOUT-BLOCK_7d125d4f-d5a9-4ec5-a398-3c40db9d9343xIN1"
+        "id": "xy-edge__BLOCK_fe0f67d0-ee50-4216-badb-ecad41ebbeacOUT-BLOCK_7d125d4f-d5a9-4ec5-a398-3c40db9d9343xIN1",
+        "selected": false
       },
       {
         "type": "smoothstep",
-        "source": "BLOCK_c209bc95-2633-4a4c-8ae1-324c875425be",
+        "source": "BLOCK_9deede65-b641-4406-be2a-0ae2dda83296",
         "sourceHandle": "iDAC1",
         "target": "BLOCK_8141dff9-506d-41fb-90a6-f6355052f1e1",
         "targetHandle": "IN1",
@@ -5659,7 +5863,7 @@ PROGRAM main
       },
       {
         "type": "smoothstep",
-        "source": "BLOCK_c209bc95-2633-4a4c-8ae1-324c875425be",
+        "source": "BLOCK_9deede65-b641-4406-be2a-0ae2dda83296",
         "sourceHandle": "iDAC2",
         "target": "BLOCK_8141dff9-506d-41fb-90a6-f6355052f1e1",
         "targetHandle": "IN2",
@@ -5669,7 +5873,7 @@ PROGRAM main
         "type": "smoothstep",
         "source": "INPUT-VARIABLE_bfe9770d-61cd-4e01-85cc-dc73995b497e",
         "sourceHandle": "output-variable",
-        "target": "BLOCK_c209bc95-2633-4a4c-8ae1-324c875425be",
+        "target": "BLOCK_9deede65-b641-4406-be2a-0ae2dda83296",
         "targetHandle": "iADC0",
         "id": "xy-edge__INPUT-VARIABLE_bfe9770d-61cd-4e01-85cc-dc73995b497eoutput-variable-BLOCK_4b04c484-688b-4d13-95c0-7a4b1780294biADC0"
       },
@@ -5677,7 +5881,7 @@ PROGRAM main
         "type": "smoothstep",
         "source": "INPUT-VARIABLE_a517f9fd-f90e-49a4-898c-2e789821d5cd",
         "sourceHandle": "output-variable",
-        "target": "BLOCK_c209bc95-2633-4a4c-8ae1-324c875425be",
+        "target": "BLOCK_9deede65-b641-4406-be2a-0ae2dda83296",
         "targetHandle": "iADC1",
         "id": "xy-edge__INPUT-VARIABLE_a517f9fd-f90e-49a4-898c-2e789821d5cdoutput-variable-BLOCK_4b04c484-688b-4d13-95c0-7a4b1780294biADC1"
       },
@@ -5685,7 +5889,7 @@ PROGRAM main
         "type": "smoothstep",
         "source": "INPUT-VARIABLE_b271a3d4-a2e1-49ba-896a-2eaecc9046fc",
         "sourceHandle": "output-variable",
-        "target": "BLOCK_c209bc95-2633-4a4c-8ae1-324c875425be",
+        "target": "BLOCK_9deede65-b641-4406-be2a-0ae2dda83296",
         "targetHandle": "iADC2",
         "id": "xy-edge__INPUT-VARIABLE_b271a3d4-a2e1-49ba-896a-2eaecc9046fcoutput-variable-BLOCK_4b04c484-688b-4d13-95c0-7a4b1780294biADC2"
       },
@@ -5693,7 +5897,7 @@ PROGRAM main
         "type": "smoothstep",
         "source": "INPUT-VARIABLE_92aa69fe-978d-4b7c-8c0b-7ea0e9a237b9",
         "sourceHandle": "output-variable",
-        "target": "BLOCK_c209bc95-2633-4a4c-8ae1-324c875425be",
+        "target": "BLOCK_9deede65-b641-4406-be2a-0ae2dda83296",
         "targetHandle": "iADC3",
         "id": "xy-edge__INPUT-VARIABLE_92aa69fe-978d-4b7c-8c0b-7ea0e9a237b9output-variable-BLOCK_4b04c484-688b-4d13-95c0-7a4b1780294biADC3"
       }
