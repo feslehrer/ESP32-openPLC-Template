@@ -111,7 +111,7 @@
             "location": "%QX0.1",
             "initialValue": "1",
             "documentation": "",
-            "debug": true
+            "debug": false
           },
           {
             "name": "LED3",
@@ -188,7 +188,7 @@
             "location": "%IW0",
             "initialValue": null,
             "documentation": "",
-            "debug": true
+            "debug": false
           },
           {
             "name": "A2",
@@ -199,7 +199,7 @@
             "location": "%IW1",
             "initialValue": null,
             "documentation": "",
-            "debug": true
+            "debug": false
           },
           {
             "name": "A1",
@@ -210,7 +210,7 @@
             "location": "%IW2",
             "initialValue": null,
             "documentation": "",
-            "debug": true
+            "debug": false
           },
           {
             "name": "A0",
@@ -221,7 +221,7 @@
             "location": "%IW3",
             "initialValue": null,
             "documentation": "",
-            "debug": true
+            "debug": false
           },
           {
             "name": "DAC1",
@@ -399,13 +399,6 @@
       }
     ],
     "debugVariables": {
-      "global": [
-        "LED2",
-        "A3",
-        "A2",
-        "A1",
-        "A0"
-      ],
       "pous": {
         "MeineSteuerung": [
           "xOUT8",
@@ -417,13 +410,6 @@
           "iADC1",
           "iADC2",
           "iADC3"
-        ],
-        "main": [
-          "LED2",
-          "A3",
-          "A2",
-          "A1",
-          "A0"
         ]
       }
     }
